@@ -1,0 +1,71 @@
+@font-face {
+    font-family: 'Quebec';
+    src: url('Quebec-Bold.woff2') format('woff2'),
+        url('Quebec-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Quebec';
+    src: url('Quebec-Italic.woff2') format('woff2'),
+        url('Quebec-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Quebec';
+    src: url('Quebec-Regular.woff2') format('woff2'),
+        url('Quebec-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cooper Hewitt';
+    src: url('CooperHewitt-Bold.woff2') format('woff2'),
+        url('CooperHewitt-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body{
+  @apply .font-text .text-primary-dark;
+}
+
+[data-colorway="reverse"]{
+  @apply .text-white;
+  & a{
+    @apply .text-white;
+  }
+}
+
+h1,h2,h3,h4{
+  @apply .font-display .font-bold .mt-0 .mb-6;
+}
+
+h1,h2,h3,h4,p{
+  @apply .max-w-sm .mx-auto;
+}
+
+h1{
+  @apply .text-5xl;
+}
+h2{
+  @apply .text-3xl;
+}
+h3{
+  @apply .text-2xl;
+}
+
+a{
+  @apply .text-primary-accent;
+}
+
+p{
+  @apply .leading-normal .text-base .mb-4 .mt-0;
+  & a{
+    @apply .italic;
+  }
+}

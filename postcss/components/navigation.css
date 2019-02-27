@@ -1,0 +1,34 @@
+.logo{
+  width: 2rem;
+  height: 2rem;
+}
+nav{
+  @apply .max-w-xs .mx-auto;
+  & ul{
+    list-style: none;
+    @apply .flex .justify-between .items-center .pl-0;
+  }
+  & .nav-item{
+    position:relative;
+    & a{
+      text-decoration: none;
+    }
+  }
+  & .nav-item:after{
+    content:'';
+    display: block;
+    position: absolute;
+    bottom: -.25rem;
+    left: 0;
+    width: 0px;
+    height: .125rem;
+    transition: all ease-out 150ms;
+    background: config('colors.primary-accent');
+  }
+  & .nav-item.active:after, & .nav-item:hover:after{
+    width: 100%;
+  }
+  & .nav-item.active a{
+    @apply .text-primary-dark;
+  }
+}
