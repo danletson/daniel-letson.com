@@ -1,32 +1,40 @@
 @font-face {
     font-family: 'Quebec';
-    src: url('Quebec-Bold.woff2') format('woff2'),
-        url('Quebec-Bold.woff') format('woff');
+    src: url('../../fonts/Quebec-Bold.woff2') format('woff2'),
+        url('../../fonts/Quebec-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Quebec';
-    src: url('Quebec-Italic.woff2') format('woff2'),
-        url('Quebec-Italic.woff') format('woff');
+    src: url('../../fonts/Quebec-Italic.woff2') format('woff2'),
+        url('../../fonts/Quebec-Italic.woff') format('woff');
     font-weight: normal;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Quebec';
-    src: url('Quebec-Regular.woff2') format('woff2'),
-        url('Quebec-Regular.woff') format('woff');
+    src: url('../../fonts/Quebec-Regular.woff2') format('woff2'),
+        url('../../fonts/Quebec-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Cooper Hewitt';
-    src: url('CooperHewitt-Bold.woff2') format('woff2'),
-        url('CooperHewitt-Bold.woff') format('woff');
+    src: url('../../fonts/CooperHewitt-Bold.woff2') format('woff2'),
+        url('../../fonts/CooperHewitt-Bold.woff') format('woff');
     font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cooper Hewitt';
+    src: url('../../fonts/CooperHewitt-Book.woff2') format('woff2'),
+        url('../../fonts/CooperHewitt-Book.woff') format('woff');
+    font-weight: normal;
     font-style: normal;
 }
 
@@ -38,6 +46,7 @@ body{
   @apply .text-white;
   & a{
     @apply .text-white;
+    text-shadow: none;
   }
 }
 
@@ -67,5 +76,13 @@ p{
   @apply .leading-normal .text-base .mb-4 .mt-0;
   & a{
     @apply .italic;
+    text-decoration: none;
+    position: relative;
+    text-shadow: 0px 1px 0px white, 1px 0px 0px white, -1px 0px 0px white;
+    border-bottom: 2px solid transparent;
+    transition: all .2s ease-out;
+  }
+  & a:hover{
+    border-bottom: 2px solid config('colors.primary-accent');
   }
 }

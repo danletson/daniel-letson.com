@@ -1,11 +1,14 @@
-var gulp = require('gulp');
-var gm = require('gulp-gm');
-var tailwindcss = require('tailwindcss');
-var postcss = require('gulp-postcss');
-var postcssimport = require('postcss-import');
-var postcssnesting = require('postcss-nesting');
-var purify = require('gulp-purifycss');
-var autoprefix = require('gulp-autoprefixer');
+const gulp = require('gulp');
+const imageResize = require('gulp-image-resize');
+const tailwindcss = require('tailwindcss');
+const postcss = require('gulp-postcss');
+const rename = require('gulp-rename');
+const imagemin = require('gulp-imagemin');
+const webp = require('gulp-webp');
+const postcssimport = require('postcss-import');
+const postcssnesting = require('postcss-nesting');
+const purify = require('gulp-purifycss');
+const autoprefix = require('gulp-autoprefixer');
 
 
 /*
@@ -30,9 +33,26 @@ var autoprefix = require('gulp-autoprefixer');
      .pipe(gulp.dest('css'));
  });
 
+function resize(cb) {
+  [800,1500].forEach(function (size) {
+    gulp.src('img/*.{jpg,jpeg,png}')
+      .pipe(imageResize({
+        width: size,
+        upscale: false,
+        interlace: true
+      }))
+      .pipe(imagemin())
+      .pipe(webp())
+      .pipe(gulp.dest('img/dist/'+ size +'/'))
+  });
+  cb();
+}
+
+gulp.task('resize', resize);
+
 gulp.task('purify', function(){
   return gulp.src('css/main.css')
-    .pipe(purify(['*.html'],{rejected:true,minify:true}))
+    .pipe(purify(['projects/index.html','resume/index.html','index.html'],{rejected:true,minify:true}))
     .pipe(autoprefix())
     .pipe(gulp.dest('css/dist'));
 });

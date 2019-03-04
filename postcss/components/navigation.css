@@ -10,8 +10,10 @@ nav{
   }
   & .nav-item{
     position:relative;
+    z-index:5;
     & a{
       text-decoration: none;
+      text-shadow: 0px 1px 0px white, 1px 0px 0px white, -1px 0px 0px white;
     }
   }
   & .nav-item:after{
@@ -24,6 +26,7 @@ nav{
     height: .125rem;
     transition: all ease-out 150ms;
     background: config('colors.primary-accent');
+    z-index:-1;
   }
   & .nav-item.active:after, & .nav-item:hover:after{
     width: 100%;

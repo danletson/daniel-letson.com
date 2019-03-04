@@ -4,7 +4,7 @@ body{
 }
 
 .intro{
-  @apply .max-w-sm .mx-auto;
+  @apply .max-w-sm .mx-auto .px-4;
 }
 
 header{
@@ -16,6 +16,48 @@ header{
   @apply .py-12 .text-center;
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    bottom: -1rem;
+  }
+
+  to {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in{
+  position:relative;
+  animation-duration: .5s;
+  animation-name: fadeIn;
+  animation-timing-function: ease-out;
+}
+
+.fade-in-up{
+  position:relative;
+  animation-duration: .4s;
+  animation-name: fadeInUp;
+  animation-timing-function: ease-out;
+}
+
+
+
 main{
   flex-basis: 100%;
   & .intro{
@@ -24,11 +66,6 @@ main{
 
 main.home{
   @apply .flex .items-center .justify-center;
-}
-
-footer{
-  @apply .p-6 .mx-auto .w-full .text-center;;
-  flex-basis: 2rem;
 }
 
 main.resume{
@@ -117,6 +154,11 @@ figcaption{
 .two-column-container{
   @apply .flex .max-w-lg .mx-auto;
   flex-wrap: wrap;
+}
+
+footer{
+  @apply .p-6 .mx-auto .w-full .text-center;;
+  flex-basis: 2rem;
 }
 
 @screen md{
