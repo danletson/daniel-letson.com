@@ -63,9 +63,12 @@
     </div>
   </main>
   <footer>
-    <small>&copy; Daniel Letson 2019</small>
+    <small>&copy; Daniel Letson <span id="year"></span></small>
   </footer>
   <script src="js/main.js"></script>
+  <script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+  </script>
 </body>
 
 </html>
