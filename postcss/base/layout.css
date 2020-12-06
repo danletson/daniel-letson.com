@@ -135,7 +135,7 @@ figcaption{
   & .tag{
     border: 1px solid config('colors.primary-dark');
     text-transform: uppercase;
-    @apply .text-sm .inline-block .font-display .px-3 .pt-2 .pb-1 .mr-2;
+    @apply .text-sm .inline-block .font-display .px-3 .pt-2 .pb-1 .mr-2 .mb-2;
   }
 }
 

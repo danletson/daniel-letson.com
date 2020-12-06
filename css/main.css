@@ -1252,6 +1252,7 @@ figcaption {
   padding-top: .5rem;
   padding-bottom: .25rem;
   margin-right: .5rem;
+  margin-bottom: .5rem;
 }
 
 [data-colorway="reverse"] .tags .tag {
