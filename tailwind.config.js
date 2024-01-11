@@ -1,0 +1,81 @@
+module.exports = {
+  content: ["./src/**/*.{html,js}"],
+  theme: {
+    extend: {
+      colors: {
+        'transparent': 'transparent',
+        'primary-dark': '#260128',
+        'primary-accent': '#0053B8',
+        'white': '#ffffff'
+      }
+    },
+    fontFamily: {
+      'sans': [
+        'system-ui',
+        'BlinkMacSystemFont',
+        '-apple-system',
+        'Segoe UI',
+        'Roboto',
+        'Oxygen',
+        'Ubuntu',
+        'Cantarell',
+        'Fira Sans',
+        'Droid Sans',
+        'Helvetica Neue',
+        'sans-serif',
+      ],
+      'serif': [
+        'Loretta',
+        'Constantia',
+        'Lucida Bright',
+        'Lucidabright',
+        'Lucida Serif',
+        'Lucida',
+        'DejaVu Serif',
+        'Bitstream Vera Serif',
+        'Liberation Serif',
+        'Georgia',
+        'serif',
+      ],
+      'mono': [
+        'Menlo',
+        'Monaco',
+        'Consolas',
+        'Liberation Mono',
+        'Courier New',
+        'monospace',
+      ],
+      'text': [
+        'Loretta',
+        'system-ui',
+        'BlinkMacSystemFont',
+        '-apple-system',
+        'Segoe UI',
+        'Roboto',
+        'Oxygen',
+        'Ubuntu',
+        'Cantarell',
+        'Fira Sans',
+        'Droid Sans',
+        'Helvetica Neue',
+        'sans-serif',
+      ],
+      'display': [
+        'Archivo',
+        'system-ui',
+        'BlinkMacSystemFont',
+        '-apple-system',
+        'Segoe UI',
+        'Roboto',
+        'Oxygen',
+        'Ubuntu',
+        'Cantarell',
+        'Fira Sans',
+        'Droid Sans',
+        'Helvetica Neue',
+        'sans-serif',
+      ]
+    }
+  },
+  plugins: [],
+}

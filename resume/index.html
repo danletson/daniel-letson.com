@@ -19,35 +19,28 @@
   <meta property="og:description" content="Professional resume and contact information">
   <meta property="og:url" content="https://www.daniel-letson.com/resume">
   <meta property="og:image" content="https://www.daniel-letson.com/img/twitter-card.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@danletson">
-  <meta name="twitter:creator" content="@danletson">
-  <meta name="twitter:title" content="Daniel Letson | Resume">
-  <meta name="twitter:description" content="Professional resume and contact information">
-  <meta name="twitter:url" content="https://www.daniel-letson.com/resume">
-  <meta name="twitter:image" content="https://www.daniel-letson.com/img/twitter-card.png">
-
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
   <link rel="stylesheet" href="../css/dist/main.css">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0074ff">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="mask-icon" href="../safari-pinned-tab.svg" color="#0074ff">
   <meta name="msapplication-TileColor" content="#0074ff">
   <meta name="theme-color" content="#ffffff">
   <link rel="shortcut icon" type="image/x-icon" href="../img/dl-logo.svg">
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@87.5,600;90,400;90,500&display=swap" rel="stylesheet">
 </head>
-
 <body>
   <header>
     <nav>
       <ul>
         <li>
-          <a href="/">
+          <a href="/" aria-label="Home">
             <svg version="1.1" id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 460 290" width="52" height="34" xml:space="preserve"><path style="fill:#0074FF;" class="d" d="M128.596,3.865L3.354,129.107l35.298,35.298c34.585,34.585,92.515,36.442,127.1,1.857 s33.192-92.051-1.393-126.636L128.596,3.865z"/> <polygon style="fill:#0074FF;" class="l" points="198.646,97.135 198.646,198.135 97.646,198.135 97.646,276.135 208.748,276.135 276.646,276.135 276.646,207.418 276.646,97.135 "/></svg>
           </a>
         </li>
@@ -72,56 +65,80 @@
         </section>
         <section id="education">
           <h2>Education</h2>
-          <p>
-            <strong>BFA, Industrial Design</strong>
-            Magna Cum Laude<br>
-            Carnegie Mellon University<br>
-            Spring 2008
-          </p>
+          <div class="entry">
+            <h3>Carnegie Mellon</h3>
+            <p class="subhead">BFA, Industrial Design</p>
+            <p>
+              Magna Cum Laude<br>
+              Spring 2008
+            </p>
+          </div>
         </section>
         <section id="volunteering">
           <h2>Volunteering</h2>
-          <p>
-            <strong>Web&nbsp;Developer · Internet&nbsp;Archive · 2016</strong>
-            Built templates and new functionality for the Political Ad Archive in the run-up to the 2016 presidential&nbsp;election.
-          </p>
-          <p>
-            <strong>Music&nbsp;Director · KALX&nbsp;Berkeley · 2014&nbsp;—&nbsp;2016</strong>
-            Organized student and community volunteers, sourced music, wrote newsletters, and liased with music industry representatives on behalf of one of the most venerable free-form radio stations in the&nbsp;country.
-          </p>
-          <p>
-            <strong>Eagle&nbsp;Scout · Boy&nbsp;Scouts&nbsp;of&nbsp;America · 2004</strong>
-            Awarded the BSA’s highest rank, after organizing and completing a 100 person-hour public service&nbsp;project.
-          </p>
+          <div class="entry">
+            <h3>Internet Archive</h3>
+            <p class="subhead">Web&nbsp;Developer · 2016</p>
+            <p>
+              Built templates and new functionality for the Political Ad Archive in the run-up to the 2016 presidential&nbsp;election.
+            </p>
+          </div>
+          <div class="entry">
+            <h3>KALX Berkeley</h3>
+            <p class="subhead">Music&nbsp;Director · 2014&nbsp;—&nbsp;2016</p>
+            <p>
+              Organized student and community volunteers, sourced music, wrote newsletters, and liased with music industry representatives on behalf of one of the most venerable free-form radio stations in the&nbsp;country.
+            </p>
+          </div>
+          <div class="entry">
+            <h3>Boy Scouts of America</h3>
+            <p class="subhead">Eagle&nbsp;Scout · 2004</p>
+            <p>
+              Awarded the BSA’s highest rank, after organizing and completing a 100 person-hour public service&nbsp;project.
+            </p>
+          </div>
         </section>
       </div>
       <div class="column-right">
         <section id="experience">
           <h2>Experience</h2>
-          <p>
-            <strong>Product&nbsp;Designer · Fluxx&nbsp;Labs · 2019&nbsp;—&nbsp;present</strong>
-            Designing user experiences for SaaS products in the nonprofit space. Conducting user research, developing go-to-market strategy, and designing new features from whiteboarding to coded&nbsp;prototypes.
-          </p>
-          <p>
-            <strong>Web Lead,&nbsp;Marketing · Turnitin,&nbsp;LLC · 2013&nbsp;—&nbsp;2019</strong>
-            Tackled a wide variety of planning and development tasks for Turnitin’s global marketing team, from interactive data visualizations, to lead collection, to a ground-up overhaul of turnitin.com, comprising information architecture, ux, and build / release&nbsp;infrastructure.
-          </p>
-          <p>
-            <strong>Freelance Designer and&nbsp;Developer · 2012&nbsp;—&nbsp;present</strong>
-            Developed brand identities and functional web experiences for a diverse range of clients including retailers, record labels, artists, and&nbsp;nonprofits.
-          </p>
-          <p>
-            <strong>Design&nbsp;Contractor · Klassik&nbsp;Living · 2010&nbsp;—&nbsp;2012</strong>
-            Served as a jack-of-all-trades contractor for an upscale reseller of vintage Danish modern furniture. Refinishing and repair, merchandising, product photography, and web design and&nbsp;development.
-          </p>
-          <p>
-            <strong>Woodworker · Zarganis,&nbsp;Inc · 2009&nbsp;—&nbsp;2010</strong>
-            Designed, engineered, and fabricated custom furniture and architectural elements, incorporating reused materials and green technologies, including work on a LEED Platinum Certified office&nbsp;suite.
-          </p>
-          <p>
-            <strong>Product Designer and&nbsp;Researcher · CMU&nbsp;CREATE&nbsp;Labs · 2007</strong>
-            Designed and prototyped interactive robotic devices alongside a team of develoeprs and educators. Designed curricula, organized events, and conducted user testing&nbsp;workshops.
-          </p>
+          <div class="entry">
+            <h3>Fluxx Labs</h3>
+            <p class="subhead">
+              Senior Product&nbsp;Designer · 2019&nbsp;—&nbsp;present
+            </p>
+            <p>
+              Led product design and UX efforts for a leading SaaS platform in the nonprofit space. Conducted regular user research sessions, did market research, planned product strategy, and designed dozens of live features. Built the company's first design system and consulted with engineers on its implementation: building hundreds of prototypes, auditing markup for WCAG compliance, and developing CI/CD workflows.
+            </p>
+          </div>
+          <div class="entry">
+            <h3>Turnitin, LLC</h3>
+            <p class="subhead">Web Lead, Marketing · 2013&nbsp;—&nbsp;2019</p>
+            <p>
+              Tackled a wide variety of planning and development tasks for Turnitin’s global marketing team, from interactive data visualizations to a complete overhaul of turnitin.com, comprising information architecture, UX, and build / release&nbsp;infrastructure.
+            </p>
+          </div>
+          <div class="entry">
+            <h3>Klassik Living</h3>
+            <p class="subhead">Design Contractor · 2010&nbsp;—&nbsp;2012</p>
+            <p>
+              Served as a jack-of-all-trades contractor for an upscale reseller of vintage Danish modern furniture. Refinishing and repair, merchandising, product photography, and web design and&nbsp;development.
+            </p>
+          </div>
+          <div class="entry">
+            <h3>Zarganis, Inc</h3>
+            <p class="subhead">Woodworker · 2008&nbsp;—&nbsp;2010</p>
+            <p>
+              Designed, engineered, and fabricated custom furniture and architectural elements, incorporating reused materials and green technologies, including work on a LEED Platinum Certified office&nbsp;suite.
+            </p>
+          </div>
+          <div class="entry">
+            <h3>CMU CREATE Labs</h3>
+            <p class="subhead">Product Designer · 2007</p>
+            <p>
+              Designed and prototyped interactive robotic devices alongside a team of develoeprs and educators. Designed curricula, organized events, and conducted user testing&nbsp;workshops.
+            </p>
+          </div>
         </section>
       </div>
     </div>
