@@ -1,11 +1,12 @@
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: ["./**/*.{html}"],
   theme: {
     extend: {
       colors: {
         'transparent': 'transparent',
         'primary-dark': '#260128',
-        'primary-accent': '#0053B8',
+        'primary-accent': 'orangered',
+        'secondary-dark': '#4E6B8F',
         'white': '#ffffff'
       }
     },
@@ -46,7 +47,7 @@ module.exports = {
         'monospace',
       ],
       'text': [
-        'Loretta',
+        'Inter',
         'system-ui',
         'BlinkMacSystemFont',
         '-apple-system',
@@ -61,7 +62,7 @@ module.exports = {
         'sans-serif',
       ],
       'display': [
-        'Archivo',
+        'Inter',
         'system-ui',
         'BlinkMacSystemFont',
         '-apple-system',

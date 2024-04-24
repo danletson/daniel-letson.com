@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daniel Letson | Case Study - Demographics Reporting </title>
+
+  <!--
+        ____                 _        __   __          __
+       / __ \ ____ _ ____   (_)___   / /  / /   ___   / /_ _____ ____   ____
+      / / / // __ `// __ \ / // _ \ / /  / /   / _ \ / __// ___// __ \ / __ \
+     / /_/ // /_/ // / / // //  __// /  / /___/  __// /_ (__  )/ /_/ // / / /
+    /_____/ \__,_//_/ /_//_/ \___//_/  /_____/\___/ \__//____/ \____//_/ /_/
+
+  -->
+
+  <meta name="description" content="Portfolio of recent work">
+  <meta property="og:title" content="Daniel Letson | Projects">
+  <meta property="og:description" content="Portfolio of recent work">
+  <meta property="og:url" content="https://www.daniel-letson.com/projects">
+  <meta property="og:image" content="https://www.daniel-letson.com/img/twitter-card.png">
+  <link rel="manifest" href="../../site.webmanifest">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="stylesheet" href="../../css/dist/main.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+  <link rel="manifest" href="../../site.webmanifest">
+  <link rel="mask-icon" href="../../safari-pinned-tab.svg" color="#0074ff">
+  <meta name="msapplication-TileColor" content="#0074ff">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="shortcut icon" type="image/x-icon" href="../../img/dl-logo.svg">
+  <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="">&larr; Return home</a>
+    </nav>
+  </header>
+  <main class="projects fade-in">
+    <section class="project" id="fluxx-grantmaker">
+      <span class="story-type">Case Study</span>
+      <h2>Demographics Reporting</h2>
+      <div class="tags">
+        UX / Data Visualization / Accessibility / Front-End
+      </div>
+      <p><a href="https://fluxx.io" target="blank">Fluxx Grantmaker</a> is an industry leading cloud platform for grants management, used by dozens of the world’s most well-known foundations and charitable nonprofits.</p>
+      <p>
+        In 2023, Fluxx was approached by longtime partner <a href="https://candid.org">Candid</a> with the opportunity to integrate self-reported demographic data from potential grantees, enabling clients to make more informed decisions around giving, and to hit institutional goals for supporting under-represented groups. As an in-house product designer for Fluxx, I worked in collaboration with a small team to plan and deliver a new UI that would present this potentially dense and delicate data in an way that is actionable, accessible, and unbiased.
+      </p>
+      <h3>A Sensitive Subject</h3>
+      <p>
+        While the data we’d be integrating was fairly fixed, determining how it should be “reported” to decision-makers was an interesting challenge. Grants managers and other nonprofits routinely face scenarios like:
+      </p>
+      <blockquote>
+        “We’re re-granting government funds, with a mandate to support minority-led nonprofits. How do I make sure my grantees qualify?”
+      </blockquote>
+      <blockquote>
+        “This year, my program pledged 50% of our giving to organizations led by women. Are we meeting that goal?”
+      </blockquote>
+      <blockquote>
+        “We’re a small, locally-focused nonprofit, and we’d like to give to other local charities that represent the diversity of our community.”
+      </blockquote>
+      <p>
+        Charts are a natural fit for making data scannable, accessible, and useful. However, the sensitive context of the data collected (categorizing people by their race, ethnicity, sexual orientation, etc) and a non-negotiable minimum of WCAG 2.2 AA compliance made this specific use case especially challenging. The underlying data, fetched via public API, was available to all of Fluxx’s competitors, so the user experience was our only chance to differentiate.
+      </p>
+      <h3>
+        Information Overload
+      </h3>
+      <p>
+        Much of the data delivered by Candid is simply counts of employees at a specific nonprofit by demographic category, like <strong>Race & Ethnicity, Gender Identity, Disability Status</strong> etc. Visualizing this kind of categorical data is relatively simple, but starting with a critique of Candid’s own internal examples, a few challenges presented themselves:
+      </p>
+      <ul>
+        <li>Many categories, up to ten per chart</li>
+        <li>Using only color to encode data</li>
+        <li>Use of several semantically charged colors, like red and green</li>
+        <li>Accessibility issues like low color contrast and no tabular data</li>
+      </ul>
+      <div class="image">
+        <figure>
+          <picture>
+            <!-- <source media="(min-width: 800px)" srcset="../../img/dist/1500/fluxx-design-system-documentation-site-components.webp" type="image/webp">
+            <source media="(max-width: 799px)" srcset="../../img/dist/800/fluxx-design-system-documentation-site-components.webp" type="image/webp"> -->
+            <img src="../../img/candid-demographics-default-visualization.png" alt="Candid demographics default visualization">
+          </picture>
+          <figcaption>
+            An example nonprofit demographic profile from Candid.org
+          </figcaption>
+        </figure>
+      </div>
+      <p>
+        One of the biggest, and most potentially fraught decisions in building out our data visualizations was picking appropriate colors. Believe it or not, <strong>The vast majority of data visualizations on the web do not take color seriously.</strong> Accessibility, legibility, and actionability are often thrown out the window for harmonious or “eye-catching” palettes, even in industry-leading products. 
+      </p>
+      <p>
+        We set out to select 10 categorical colors that were: 
+      </p>
+      <ul>
+        <li>WCAG 2.2 AA-compliant against white</li>
+        <li>Semantically neutral</li>
+        <li>Brand-aligned</li>
+        <li>Differentiable at a distance</li>
+        <li>Differentiable to users with various color-blindness conditions</li>
+      </ul>
+      <div class="glide glide-1">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide">
+              <figure>
+                <picture>
+                  <!-- <source media="(min-width: 800px)" srcset="../../img/dist/1500/fluxx-design-system-documentation-site-components.webp" type="image/webp">
+                  <source media="(max-width: 799px)" srcset="../../img/dist/800/fluxx-design-system-documentation-site-components.webp" type="image/webp"> -->
+                  <img src="../../img/demographics-visualization-colors-1.png" alt="Fluxx UI color palette">
+                </picture>
+              </figure>
+            </li>
+            <li class="glide__slide">
+              <figure>
+                <picture>
+                  <!-- <source media="(min-width: 800px)" srcset="../../img/dist/1500/fluxx-design-system-documentation-site-tokens.webp" type="image/webp">
+                  <source media="(max-width: 799px)" srcset="../../img/dist/800/fluxx-design-system-documentation-site-tokens.webp" type="image/webp"> -->
+                  <img src="../../img/demographics-visualization-colors-2.png" alt="Fluxx UI color palette with duplicate colors removed">
+                </picture>
+              </figure>
+            </li>
+            <li class="glide__slide">
+              <figure>
+                <picture>
+                  <!-- <source media="(min-width: 800px)" srcset="../../img/dist/1500/fluxx-form-example.webp" type="image/webp">
+                  <source media="(max-width: 799px)" srcset="../../img/dist/800/fluxx-form-example.webp" type="image/webp"> -->
+                  <img src="../../img/demographics-visualization-colors-3.png" alt="Fluxx UI color palette with non-accessible colors removed">
+                </picture>
+              </figure>
+            </li>
+            <li class="glide__slide">
+              <figure>
+                <picture>
+                  <!-- <source media="(min-width: 800px)" srcset="../../img/dist/1500/fluxx-form-example.webp" type="image/webp">
+                  <source media="(max-width: 799px)" srcset="../../img/dist/800/fluxx-form-example.webp" type="image/webp"> -->
+                  <img src="../../img/demographics-visualization-colors-4.png" alt="Final acceptable color palette">
+                </picture>
+              </figure>
+            </li>
+            <li class="glide__slide">
+              <figure>
+                <picture>
+                  <!-- <source media="(min-width: 800px)" srcset="../../img/dist/1500/fluxx-form-example.webp" type="image/webp">
+                  <source media="(max-width: 799px)" srcset="../../img/dist/800/fluxx-form-example.webp" type="image/webp"> -->
+                  <img src="../../img/demographics-visualization-palette-colorblindness.png" alt="Color palette filtered for various color-blindness conditions">
+                </picture>
+              </figure>
+            </li>
+          </ul>
+          <div class="glide__footer">
+            <div class="glide__caption">
+              <figcaption>
+                Identifying a useable color palette by process of elimination
+              </figcaption>
+            </div>
+            <div class="glide__navigation">
+              <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+                Prev
+              </button>
+              <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+                Next
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h3>
+      Solution
+    </h3>
+    <p>
+      The shipped solution delivered approachable visualizations with one-click access to the underlying data, encoded with comfortably spaced, easily distinguishable stacked bars. Hover states for both the charts and the tables highlight specific segments for legibility. Conditionally styled inline micro-charts in the data table make it easy to determine the biggest segment in each category in cases where the stacked bars might be ambiguous. 
+    </p>
+    <div class="glide glide-2">
+      <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+          <li class="glide__slide">
+            <div class="video-wrapper" style="padding-bottom:95%;">
+              <video poster="../../img/demographics-reporting-component-cover.png" controls="controls" tabindex="0" autoplay="autoplay" loop="loop">
+                <source src="../../img/demographics-reporting-component-demo.mp4" type="video/mp4">
+                Video tag not supported. Download the video 
+                <a href="../../img/demographics-reporting-component-demo.mp4">here</a>.
+              </video>
+            </div>
+          </li>
+          <li class="glide__slide">
+            <figure>
+              <picture>
+                <!-- <source media="(min-width: 800px)" srcset="../../img/dist/1500/fluxx-design-system-documentation-site-components.webp" type="image/webp">
+                <source media="(max-width: 799px)" srcset="../../img/dist/800/fluxx-design-system-documentation-site-components.webp" type="image/webp"> -->
+                <img src="../../img/demographics-visualization-1.png" alt="Final visualization">
+              </picture>
+            </figure>
+          </li>
+          <li class="glide__slide">
+            <figure>
+              <picture>
+                <!-- <source media="(min-width: 800px)" srcset="../../img/dist/1500/fluxx-design-system-documentation-site-tokens.webp" type="image/webp">
+                <source media="(max-width: 799px)" srcset="../../img/dist/800/fluxx-design-system-documentation-site-tokens.webp" type="image/webp"> -->
+                <img src="../../img/demographics-visualization-2.png" alt="Final visualization with individual data point hovered">
+              </picture>
+            </figure>
+          </li>
+        </ul>
+        <div class="glide__footer">
+          <div class="glide__caption">
+            <figcaption>
+              The final visualization with embedded tabular data
+            </figcaption>
+          </div>
+          <div class="glide__navigation">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+              Prev
+            </button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+              Next
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p>This version is now live inside Fluxx's Grantmaker platform, used by hundreds of nonprofits on a daily basis. <a href="https://www.fluxx.io/blog/fostering-equitable-grantmaking-integrating-demographic-data-with-grants-management-software" target="blank">Read more about the feature on Fluxx's blog &rarr;</a></p>
+  <h3>
+    Limitations and what's next
+  </h3>
+  <p>
+    While the delivered component is very useful for reviewing grantee organizations one-by-one, the real power in this kind of data comes from aggregation and automation. Executives want to know not just the composition of a single nonprofit, but how the demographics of their entire giving portfolio stack up. Fluxx plans to build out more robust reporting infrastructure to support these use cases, and further cement Grantmaker as data-first platform. 
+  </p>
+    </section>
+  </main>
+  <footer>
+    <small>&copy; Daniel Letson <span id="year"></span></small>
+  </footer>
+  <script>
+    const slider1 = new Glide(".glide-1", {
+      type: "slider",
+      startAt: 0,
+      perView: 1,
+      gap: 0,
+      peek: {
+        before: 0,
+        after: 60
+      }
+    }).mount();
+
+    document.querySelector(".glide-1 .glide__arrow--right").addEventListener("click", () => {
+      slider1.go(">");
+    });
+
+    document.querySelector(".glide-1 .glide__arrow--left").addEventListener("click", () => {
+      slider1.go("<");
+    });
+
+    const slider2 = new Glide(".glide-2", {
+      type: "slider",
+      startAt: 0,
+      perView: 1,
+      gap: 0
+    }).mount();
+
+    document.querySelector(".glide-2 .glide__arrow--right").addEventListener("click", () => {
+      slider2.go(">");
+    });
+
+    document.querySelector(".glide-2 .glide__arrow--left").addEventListener("click", () => {
+      slider2.go("<");
+    });
+
+  </script>
+</body>
+
+</html>
