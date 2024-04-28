@@ -74,6 +74,10 @@ p{
     }
 }
 
+*::selection{
+  @apply bg-primary-accent;
+}
+
 strong{
   @apply font-medium;
 }
@@ -82,7 +86,7 @@ strong{
   @apply mb-12;
 }
 
-.image img{
+.image img, .video{
   background: aliceblue;
   @apply p-4 mb-2;
 }
@@ -103,10 +107,11 @@ strong{
 }
 
 ul{
-  @apply pl-2 mb-6;
+  @apply pl-4 mb-6;
   li{
     list-style: disc;
-    list-style-position: inside;
+    list-style-position: outside;
+    @apply mb-2;
   }
 }
 
@@ -190,31 +195,34 @@ main.home{
   @apply flex items-center justify-center;
 }
 
-main.resume{
-  @apply px-4;
-  & section{
-    @apply mb-16;
-    & p{
-      @apply mb-8;
-      & strong{
-        @apply block mb-3;
-      }
-    }
-  }
-  .entry{
-    @apply font-text mb-4;
-    h3{
-        @apply mb-2;
-    }
-    p.subhead{
-        @apply font-display mb-3;
-        line-height: 1.2;
-    }
-  }
+.resume header{
+  @apply mb-12;
+}
+
+.resume h1{
+  @apply text-center mt-12;
+}
+
+.resume h2{
+  @apply font-normal border-primary-accent inline-block;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+.resume h3{
+  @apply mt-0 mb-2 font-semibold;
+}
+
+.resume section, .resume .entry{
+  @apply mb-12;
 }
 
 section.project{
   @apply pt-12 pb-0 max-w-2xl mx-auto;
+}
+
+.resume .subhead{
+  @apply italic mb-2;
 }
 
 .stripe{

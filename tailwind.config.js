@@ -5,7 +5,7 @@ module.exports = {
       colors: {
         'transparent': 'transparent',
         'primary-dark': '#260128',
-        'primary-accent': 'orangered',
+        'primary-accent': 'turquoise',
         'secondary-dark': '#4E6B8F',
         'white': '#ffffff'
       }
