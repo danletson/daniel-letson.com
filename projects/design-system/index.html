@@ -14,9 +14,9 @@
 
   -->
 
-  <meta name="description" content="Portfolio of recent work">
-  <meta property="og:title" content="Daniel Letson | Projects - UI Design System">
-  <meta property="og:description" content="Portfolio of recent work">
+  <meta name="description" content="A product design case study">
+  <meta property="og:title" content="Daniel Letson | Case Study - Design System">
+  <meta property="og:description" content="A product design case study">
   <meta property="og:url" content="https://www.daniel-letson.com/projects">
   <meta property="og:image" content="https://www.daniel-letson.com/img/twitter-card.png">
   <link rel="manifest" href="../../site.webmanifest">
@@ -30,35 +30,38 @@
   <meta name="msapplication-TileColor" content="#0074ff">
   <meta name="theme-color" content="#ffffff">
   <link rel="shortcut icon" type="image/x-icon" href="../../img/dl-logo.svg">
-  <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
 </head>
 <body>
   <header>
     <nav>
-      <a href="">&larr; Return home</a>
+      <a href="/">&larr; Return home</a>
     </nav>
   </header>
   <main class="projects fade-in">
-    <section class="project" id="fluxx-grantmaker">
+    <section class="project" id="design-system">
       <span class="story-type">Case Study</span>
       <h2>Design System</h2>
       <div class="tags">
         UI / Accessibility / Strategy
       </div>
-      <p><a href="https://fluxx.io" target="blank">Fluxx</a> is one of the world's most popular platforms for grants management. As a senior product designer, I lead the creation of a design system to standardize UI and UX patterns for a mature, data-dense SaaS platform with more than 500 institutional clients and tens of thousands of daily users. I established platform-agnostic design tokens, oversaw the development of component prototypes, built and enforced semantic and accessibility guidelines, and architected integration and deployment flows.</p>
-      <div class="image">
-        <figure>
-          <picture>
-            <iframe title="Embeded Figma design file - Fluxx design system tokens" style="border: 1px solid rgba(0, 0, 0, 0.1); margin-bottom: 12px;" width="100%" height="550" src="https://www.figma.com/embed?embed_host=share&amp;url=https%3A%2F%2Fwww.figma.com%2Ffile%2FS2hU0lc4xaZ86RXlx5SOyL%2FFluxx-Design-System---Elements%3Ftype%3Ddesign%26node-id%3D314%253A6166%26mode%3Ddesign%26t%3D9nLbLx26iXnsgaND-1" allowfullscreen=""></iframe>
-          </picture>
-          <figcaption>
-            Fluxx design tokens library
-          </figcaption>
-        </figure>
-      </div>
+      <p><a href="https://fluxx.io" target="blank">Fluxx</a> is one of the world's most popular platforms for grants management. As an in-house senior product designer, I lead the creation of a design system to standardize UI and UX patterns for a mature, data-dense SaaS platform with more than 500 institutional clients and tens of thousands of daily users. I established platform-agnostic design tokens, oversaw the development of component prototypes, built and enforced semantic and accessibility guidelines, and architected integration and deployment flows.</p><p style="margin-bottom:24px;">Read on to learn how I tackled this gargantuan task, or <a href="#figmas">skip ahead to the Figma files</a>.</p>
+      <figure style="margin-bottom: 24px;">
+        <div class="video">
+          <div class="video-wrapper" style="padding-bottom:55%;">
+            <video poster="../../img/design-system-cover.png" controls="controls" tabindex="0" autoplay="autoplay" loop="loop">
+              <source src="../../img/design-system.mp4" type="video/mp4">
+              Video tag not supported. Download the video 
+              <a href="../../img/design-system.mp4">here</a>.
+            </video>
+          </div>
+        </div>
+        <figcaption>
+          The Fluxx Design System interactive documentation site
+        </figcaption>
+      </figure>
       <h3>Background: A Fragmented History</h3>
 
-      <p>Fluxx began as bespoke database software for a single nonprofit, growing over nearly a decade into an extremely robust and flexible SaaS platform, handling everything from form-building to customer management to custom Ruby scripting. In the early days, as the company strove to acquire nonprofit clients, customer demands for new functionality drove the product roadmap, and “more customization” was always at the top of the list. In time, the ability of Fluxx’s clients to dictate the look and feel of their interfaces lead to a few serious problems:
+      <p>Fluxx began as bespoke database software for a single nonprofit, growing over nearly a decade into an extremely robust and flexible SaaS platform, handling everything from form-building, to customer management, to custom Ruby scripting. In the early days, as the company strove to acquire nonprofit clients, customer demands for new functionality drove the product roadmap, and “more customization” was always at the top of the list. In time, the ability of Fluxx’s clients to dictate the look and feel of their interfaces lead to a few serious problems:
       </p>
       <p>A lack of legibility or accessibility guidelines in critical UX scenarios like grantee applications:</p>
       <blockquote>
@@ -119,49 +122,45 @@
           </figcaption>
         </figure>
       </div>
-      <h3>Putting it all together</h3>
+      <h3 id="figmas">Putting it all together</h3>
       <p>After designing and compiling hundreds of individual patterns and variants, the Fluxx design system is now in regular use, powering dozens of shipped features. The library comprises <a href="https://www.figma.com/file/S2hU0lc4xaZ86RXlx5SOyL/Fluxx-Design-System---Tokens?type=design&node-id=314%3A6166&mode=design&t=pN6YOFSdeHrut3D1-1">portable design tokens</a>, <a href="https://www.figma.com/file/cgXV2WmZILbfuEejyaJeNU/Fluxx-Design-System---Components-(Community)?type=design&node-id=569%3A1880&mode=design&t=51ncckBOSb1CvNMM-1"></a>UI components, a CI/CD pipeline for automated and manual QA, and an internal documentation site. New feature development has massively accelerated, and even retrofitting legacy components takes less time thanks to the tokenization of core styles.</p>
+      <div class="image">
+        <figure>
+          <picture>
+            <iframe title="Embeded Figma design file - Fluxx design system tokens library" style="border: 1px solid rgba(0, 0, 0, 0.1); margin-bottom: 12px;" width="100%" height="550" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FpiBJKA11MuyFoPx5eaeWw2%2FFluxx-Design-System---Design-Tokens%3Ftype%3Ddesign%26node-id%3D1473%253A8%26mode%3Ddesign%26t%3DdsPsOEx1RR2Xc39B-1" allowfullscreen=""></iframe>
+          </picture>
+          <figcaption>
+            Fluxx Design System Tokens Library
+          </figcaption>
+        </figure>
+      </div>
+      <div class="image">
+        <figure>
+          <picture>
+            <iframe title="Embeded Figma design file - Fluxx design system shared components" style="border: 1px solid rgba(0, 0, 0, 0.1); margin-bottom: 12px;" width="100%" height="550" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F6q14DMMISGkPFRgDUlE55o%2FFluxx-Design-System---Shared-Components%3Ftype%3Ddesign%26node-id%3D2953%253A948%26mode%3Ddesign%26t%3DUUujp9GvwRWOO2dx-1" allowfullscreen=""></iframe>
+          </picture>
+          <figcaption>
+            Fluxx Design System Shared Components Library
+          </figcaption>
+        </figure>
+      </div>
+      <div class="image">
+        <figure>
+          <picture>
+            <iframe title="Embeded Figma design file - Fluxx design system form inputs" style="border: 1px solid rgba(0, 0, 0, 0.1); margin-bottom: 12px;" width="100%" height="550" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FigWPlVoc0DFp1MkOFLDIEJ%2FForm-Inputs---Fluxx-Design-System%3Ftype%3Ddesign%26node-id%3D2953%253A948%26mode%3Ddesign%26t%3Dpc2DVZm4bZNurqpG-1" allowfullscreen=""></iframe>
+          </picture>
+          <figcaption>
+            Fluxx Design System Form Inputs Library
+          </figcaption>
+        </figure>
+      </div>
     </section>
   </main>
   <footer>
     <small>&copy; Daniel Letson <span id="year"></span></small>
   </footer>
   <script>
-    const slider1 = new Glide(".glide-1", {
-      type: "slider",
-      startAt: 0,
-      perView: 1,
-      gap: 0,
-      peek: {
-        before: 0,
-        after: 60
-      }
-    }).mount();
-
-    document.querySelector(".glide-1 .glide__arrow--right").addEventListener("click", () => {
-      slider1.go(">");
-    });
-
-    document.querySelector(".glide-1 .glide__arrow--left").addEventListener("click", () => {
-      slider1.go("<");
-    });
-
-    const slider2 = new Glide(".glide-2", {
-      type: "slider",
-      startAt: 0,
-      perView: 1,
-      gap: 0
-    }).mount();
-
-    document.querySelector(".glide-2 .glide__arrow--right").addEventListener("click", () => {
-      slider2.go(">");
-    });
-
-    document.querySelector(".glide-2 .glide__arrow--left").addEventListener("click", () => {
-      slider2.go("<");
-    });
-
+    document.getElementById("year").innerHTML = new Date().getFullYear();
   </script>
 </body>
-
 </html>

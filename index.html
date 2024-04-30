@@ -30,31 +30,126 @@
   <meta name="msapplication-TileColor" content="#0074ff">
   <meta name="theme-color" content="#ffffff">
   <link rel="shortcut icon" type="image/x-icon" href="/img/dl-logo.svg">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@87.5,600;90,400;90,500&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
     <nav>
-      <ul>
-        <li>
-          <a href="/" aria-label="Home">
-            <svg version="1.1" id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 460 290" width="52" height="34" xml:space="preserve"><path style="fill:#0074FF;" class="d" d="M128.596,3.865L3.354,129.107l35.298,35.298c34.585,34.585,92.515,36.442,127.1,1.857 s33.192-92.051-1.393-126.636L128.596,3.865z"/> <polygon style="fill:#0074FF;" class="l" points="198.646,97.135 198.646,198.135 97.646,198.135 97.646,276.135 208.748,276.135 276.646,276.135 276.646,207.418 276.646,97.135 "/></svg>
-          </a>
-        </li>
-        <li class="nav-item"><a href="projects">Projects</a></li>
-        <li class="nav-item"><a href="resume">Resume</a></li>
-        <li class="nav-item" ><a target="blank" href="mailto:daniel.letson@gmail.com">Email</a></li>
+      <div class="logo">
+        <svg version="1.1" id="logo" title="Daniel Letson logo mark" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 290 290" xml:space="preserve"><path style="fill:#0074FF;" class="d" d="M128.596,3.865L3.354,129.107l35.298,35.298c34.585,34.585,92.515,36.442,127.1,1.857 s33.192-92.051-1.393-126.636L128.596,3.865z"/> <polygon style="fill:#0074FF;" class="l" points="198.646,97.135 198.646,198.135 97.646,198.135 97.646,276.135 208.748,276.135 276.646,276.135 276.646,207.418 276.646,97.135 "/></svg>
+      </div>
+      <div class="header-links">
+        <div class="nav-item"><a href="resume">Resume</a></div>
+        <div class="nav-item"><a target="blank" href="mailto:daniel.letson@gmail.com">Email</a></div>
+      </div>
       </ul>
     </nav>
   </header>
   <main class="home">
-    <div class="intro">
-      <h1 class="fade-in-up">I'm Daniel Letson.</h1>
-      <p class="fade-in">I design and build things on the web and IRL. <a href="/projects">Take a look at some recent examples of my work</a>, and <a target="blank" href="mailto:daniel.letson@gmail.com">email me</a> if you’d like to get in touch.</p>
-    </div>
+    <section class="home-intro">
+      <h1>I'm Daniel Letson.</h1>
+      <p>I'm a product and web designer based in Oakland, California. Take a look at some recent examples of my work, and <a target="blank" href="mailto:daniel.letson@gmail.com">email me</a> if you’d like to get in touch.</p>
+    </section>
+    <section class="projects">
+      
+      <h2>Recent Projects</h2>
+
+      <div class="project-entry" id="design-system">
+        <div class="image">
+          <figure>
+            <picture>
+              <img src="../../img/fluxx-form-example.png" alt="Design system example - form inputs">
+            </picture>
+          </figure>
+        </div>
+        <div class="description">
+          <span class="story-type">Case Study</span>
+          <h2>Design System</h2>
+          <div class="tags">
+            UX / Accessibility / Strategy
+          </div>
+          <p>How do you implement the first-ever design system for a 10-year-old enterprise platform? Very&nbsp;carefully. </p>
+          <p><a href="/projects/design-system/">Read the case study &rarr;</a></p>
+        </div>
+      </div>
+
+      <div class="project-entry" id="data-explorer">
+        <div class="image">
+          <figure>
+            <picture>
+              <img src="../../img/grantmaker-chart-view-overhaul-1.png" alt="data explorer screenshot">
+            </picture>
+          </figure>
+        </div>
+        <div class="description">
+          <span class="story-type">Case Study</span>
+          <h2>Data Explorer</h2>
+          <div class="tags">
+            UX / Data Visualization
+          </div>
+          <p>When understanding your work becomes more work than doing your work...</p>
+          <p><a href="/projects/data-explorer/">Read the case study &rarr;</a></p>
+        </div>
+      </div>
+
+      <div class="project-entry" id="demographics-reporting">
+        <div class="image">
+          <figure>
+            <picture>
+              <img src="../../img/demographics-reporting-component-cover.png" alt="data explorer screenshot">
+            </picture>
+          </figure>
+        </div>
+        <div class="description">
+          <span class="story-type">Case Study</span>
+          <h2>Demographics Reporting</h2>
+          <div class="tags">
+            UX / Data Visualization / Accessibility
+          </div>
+          <p>Reporting on sensitive data requires a light touch (and a lot of trial &amp; error)</p>
+          <p><a href="/projects/demographics-reporting/">Read the case study &rarr;</a></p>
+        </div>
+      </div>
+
+      <div class="project-entry" id="lateral-addition">
+        <div class="image">
+          <figure>
+            <picture>
+              <img src="../../img/lateral-addition-cover.png" alt="lateral addition website">
+            </picture>
+          </figure>
+        </div>
+        <div class="description">
+          <span class="story-type">Project</span>
+          <h2>Lateral Addition</h2>
+          <div class="tags">
+            Identity / Typography / Development
+          </div>
+          <p>A semi-serious platform for adventurous music</p>
+          <p><a href="/projects/lateral-addition/">Read more about this project &rarr;</a></p>
+        </div>
+      </div>
+
+      <div class="project-entry" id="music-for-the-memphis-group">
+        <div class="image">
+          <figure>
+            <picture>
+              <img src="../../img/music-for-the-memphis-group-cover.png" alt="screenshot of the 'music for the memphis group' website">
+            </picture>
+          </figure>
+        </div>
+        <div class="description">
+          <span class="story-type">Project</span>
+          <h2>Music for the Memphis Group</h2>
+          <div class="tags">
+            Branding / Development
+          </div>
+          <p>A bit of fun with SVG</p>
+          <p><a href="/projects/music-for-the-memphis-group/">Read more about this project &rarr;</a></p>
+        </div>
+      </div>
+
+
+    </section>
   </main>
   <footer>
     <small>&copy; Daniel Letson <span id="year"></span></small>

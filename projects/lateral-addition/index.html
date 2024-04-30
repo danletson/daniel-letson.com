@@ -14,9 +14,9 @@
 
   -->
 
-  <meta name="description" content="Portfolio of recent work">
-  <meta property="og:title" content="Daniel Letson | Projects">
-  <meta property="og:description" content="Portfolio of recent work">
+  <meta name="description" content="A web design and development project">
+  <meta property="og:title" content="Daniel Letson | Project - Lateral Addition">
+  <meta property="og:description" content="A web design and development project">
   <meta property="og:url" content="https://www.daniel-letson.com/projects">
   <meta property="og:image" content="https://www.daniel-letson.com/img/twitter-card.png">
   <link rel="manifest" href="../../site.webmanifest">
@@ -30,7 +30,6 @@
   <meta name="msapplication-TileColor" content="#0074ff">
   <meta name="theme-color" content="#ffffff">
   <link rel="shortcut icon" type="image/x-icon" href="../../img/dl-logo.svg">
-  <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
 </head>
 <body>
   <header>
@@ -65,8 +64,6 @@
       <div class="image">
         <figure>
           <picture>
-            <!-- <source media="(min-width: 800px)" srcset="../../img/dist/1500/fluxx-design-system-documentation-site-components.webp" type="image/webp">
-            <source media="(max-width: 799px)" srcset="../../img/dist/800/fluxx-design-system-documentation-site-components.webp" type="image/webp"> -->
             <img src="../../img/lateral-addition-logo.png" alt="Lateral Addition logo">
           </picture>
         </figure>
@@ -77,6 +74,8 @@
   <footer>
     <small>&copy; Daniel Letson <span id="year"></span></small>
   </footer>
+  <script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+  </script>
 </body>
-
 </html>

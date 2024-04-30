@@ -39,6 +39,7 @@ background: white;
 
 h1,h2,h3,h4{
     @apply font-display mt-0 mb-6;
+    letter-spacing: -0.5px;
 }
 
 h1,h2,h3,h4,p{
@@ -57,6 +58,8 @@ h3{
 
 a{
   @apply font-normal;
+  text-decoration: none;
+  position: relative;
 }
 
 p{
@@ -87,7 +90,7 @@ strong{
 }
 
 .image img, .video{
-  background: aliceblue;
+  background: lightskyblue;
   @apply p-4 mb-2;
 }
 
@@ -137,7 +140,7 @@ body{
   height: 100vh;
 }
 
-.intro{
+.home-intro{
   @apply max-w-sm mx-auto px-4;
 }
 
@@ -192,7 +195,7 @@ main{
 }
 
 main.home{
-  @apply flex items-center justify-center;
+  @apply mt-12;
 }
 
 .resume header{
@@ -204,9 +207,7 @@ main.home{
 }
 
 .resume h2{
-  @apply font-normal border-primary-accent inline-block;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
+  @apply font-normal inline-block;
 }
 
 .resume h3{
@@ -217,8 +218,30 @@ main.home{
   @apply mb-12;
 }
 
-section.project{
-  @apply pt-12 pb-0 max-w-2xl mx-auto;
+section.project, section.projects{
+  @apply pt-12 mt-12 pb-0 max-w-2xl mx-auto;
+}
+
+section.projects{
+  @apply pt-12 border-t;
+}
+
+.project-entry{
+  @apply md:flex mb-12;
+  background-color: lightskyblue;
+}
+
+.project-entry .image{
+  @apply md:w-2/3 mb-0;
+}
+
+.project-entry .image img{
+  @apply mb-0;
+}
+
+.project-entry .description{
+  @apply md:w-1/3 p-4 pr-6;
+  background: aliceblue;
 }
 
 .resume .subhead{
@@ -280,7 +303,7 @@ figcaption{
 }
 
 h2 + .tags{
-  margin-top: -1.5rem;
+  margin-top: -1rem;
 }
 
 [data-colorway="reverse"]{
@@ -346,9 +369,28 @@ nav{
   @apply text-sm pb-3 border-primary-accent border-b;
 }
 
+nav{
+  list-style: none;
+  @apply flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .header-links {
+  @apply flex;
+}
+
+nav .header-links .nav-item{
+  @apply px-2;
+}
+
+nav .header-links .nav-item:first-child{
+  border: none;
+}
+
 .logo{
-    width: 2rem;
-    height: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
   }
   
 /* Glide */
@@ -362,7 +404,7 @@ nav{
 
 .glide{
   @apply mb-12;
-  background: aliceblue;
+  background: lightskyblue;
 }
 
 .glide__slides{
