@@ -223,7 +223,7 @@ section.project, section.projects{
 }
 
 section.projects{
-  @apply pt-12 border-t;
+  @apply pt-12 border-t border-primary-accent;
 }
 
 .project-entry{
