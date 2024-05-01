@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Daniel Letson | Case Study - Demographics Reporting </title>
+  <title>Daniel Letson | Case Study - Onboarding Experience </title>
 
   <!--
         ____                 _        __   __          __
@@ -14,10 +14,10 @@
 
   -->
 
-  <meta name="description" content="Portfolio of recent work">
-  <meta property="og:title" content="Daniel Letson | Projects">
-  <meta property="og:description" content="Portfolio of recent work">
-  <meta property="og:url" content="https://www.daniel-letson.com/projects">
+  <meta name="description" content="A product design case study">
+  <meta property="og:title" content="Daniel Letson | Case Study - Onboarding Experience">
+  <meta property="og:description" content="A product design case study">
+  <meta property="og:url" content="https://www.daniel-letson.com/projects/onboarding-experience/">
   <meta property="og:image" content="https://www.daniel-letson.com/img/twitter-card.png">
   <link rel="manifest" href="../../site.webmanifest">
   <link rel="apple-touch-icon" href="../apple-touch-icon.png">
@@ -35,118 +35,116 @@
 <body>
   <header>
     <nav>
-      <a href="">&larr; Return home</a>
+      <a href="/">&larr; Return home</a>
     </nav>
   </header>
   <main class="projects fade-in">
-    <section class="project" id="fluxx-grantmaker">
+    <section class="project" id="onboarding-experience">
       <span class="story-type">Case Study</span>
-      <h2>Demographics Reporting</h2>
+      <h2>Onboarding Experience</h2>
       <div class="tags">
-        UX / Data Visualization / Accessibility / Front-End
+        UX / Onboarding / Research
       </div>
-      <p><a href="https://fluxx.io" target="blank">Fluxx Grantmaker</a> is an industry leading cloud platform for grants management, used by dozens of the world’s most well-known foundations and charitable nonprofits.</p>
-      <p>
-        In 2023, Fluxx was approached by longtime partner <a href="https://candid.org">Candid</a> with the opportunity to integrate self-reported demographic data from potential grantees, enabling clients to make more informed decisions around giving, and to hit institutional goals for supporting under-represented groups. As an in-house product designer for Fluxx, I worked in collaboration with a small team to plan and deliver a new UI that would present this potentially dense and delicate data in an way that is actionable, accessible, and unbiased.
-      </p>
-      <h3>A Sensitive Subject</h3>
-      <p>
-        While the data we’d be integrating was fairly fixed, determining how it should be “reported” to decision-makers was an interesting challenge. Grants managers and other nonprofits routinely face scenarios like:
-      </p>
-      <blockquote>
-        “We’re re-granting government funds, with a mandate to support minority-led nonprofits. How do I make sure my grantees qualify?”
-      </blockquote>
-      <blockquote>
-        “This year, my program pledged 50% of our giving to organizations led by women. Are we meeting that goal?”
-      </blockquote>
-      <blockquote>
-        “We’re a small, locally-focused nonprofit, and we’d like to give to other local charities that represent the diversity of our community.”
-      </blockquote>
-      <p>
-        Charts are a natural fit for making data scannable, accessible, and useful. However, the sensitive context of the data collected (categorizing people by their race, ethnicity, sexual orientation, etc) and a non-negotiable minimum of WCAG 2.2 AA compliance made this specific use case especially challenging. The underlying data, fetched via public API, was available to all of Fluxx’s competitors, so the user experience was our only chance to differentiate.
-      </p>
+      <p style="margin-bottom:24px;"><a href="https://grantseeker.io" target="blank">Grantseeker</a> is a SaaS productivity tool for nonprofits, which helps them track the grants they've received, communicate with funders, and search for new funding opportunities. Following a freemium model, the platform relies on turning casual users into regular users, and regular users into paying subscribers. As a product designer on the Grantseeker team, I helped to design a new onboarding flow that would get <strong>new users working with real data in less than a minute</strong>. We isolated the initial user actions most highly correlated with stickiness, and used contextual tips to progressively reveal deeper functionality inside the app.</p>
+      <figure style="margin-bottom: 24px;">
+        <div class="video">
+          <div class="video-wrapper" style="padding-bottom:64.7%;">
+            <video poster="../../img/onboarding-experience-cover.png" controls="controls" tabindex="0">
+              <source src="../../img/grantseeker-onboarding-part-1.mp4" type="video/mp4">
+              Video tag not supported. Download the video 
+              <a href="../../img/grantseeker-onboarding-part-1.mp4">here</a>.
+            </video>
+          </div>
+        </div>
+        <figcaption>
+          The Grantseeker post-signup flow
+        </figcaption>
+      </figure>
       <h3>
-        Information Overload
+        Starting with the data
       </h3>
       <p>
-        Much of the data delivered by Candid is simply counts of employees at a specific nonprofit by demographic category, like <strong>Race & Ethnicity, Gender Identity, Disability Status</strong> etc. Visualizing this kind of categorical data is relatively simple, but starting with a critique of Candid’s own internal examples, a few challenges presented themselves:
+        As with any customer-facing project, we'd have to start with the goal (a new signup becoming a return user) and work backwards. But what did it mean to be "fully onboarded" and likely to return? In the case of Grantseeker, a productivity tool that lets users structure their day-to-day work in a new way, it meant having real data in the app that models precisely the work they already manage.  
       </p>
-      <ul>
-        <li>Many categories, up to ten per chart</li>
-        <li>Using only color to encode data</li>
-        <li>Use of several semantically charged colors, like red and green</li>
-        <li>Accessibility issues like low color contrast and no tabular data</li>
-      </ul>
+      <p>
+        My design partner and I collaborated with our engineers to identify patterns of our beta users' data that are most highly correlated with regular use (multiple visits per week over a period of 3 months). Un-surprisingly, the all the biggest indicators of regular use came down to "having more records in the system." We winnowed down the list of potential record-creation / customization categories to a "top 3", and worked towards the goal of getting our new users established with all three in less than 10 minutes from signup. Here's the list:
+      </p>
+      <ol>
+        <li>Create a "funder" (a "funder" is a parent record to a grant)</li>
+        <li>Create an "grant" (the core of the app, related to a single "funder")</li>
+        <li>Create a "task" (a "to-do" for the user themselves or another person within their account, this is the most sticky, but can't exist without the first two!)</li>
+      </ol>
       <div class="image">
         <figure>
           <picture>
-            <!-- <source media="(min-width: 800px)" srcset="../../img/dist/1500/fluxx-design-system-documentation-site-components.webp" type="image/webp">
-            <source media="(max-width: 799px)" srcset="../../img/dist/800/fluxx-design-system-documentation-site-components.webp" type="image/webp"> -->
-            <img src="../../img/candid-demographics-default-visualization.png" alt="Candid demographics default visualization">
+            <img src="../../img/onboarding-experience-1.png" alt="Homepage showing onboarding checklist">
           </picture>
           <figcaption>
-            An example nonprofit demographic profile from Candid.org
+            Homepage showing onboarding checklist
+          </figcaption>
+        </figure>
+      </div>
+      <h3>A little open-source magic</h3>
+      <p>
+        One of the trickiest things about onboarding users to Grantseeker specifically is the "terror of the blank page." While the platform has all kinds of great tools to help nonprofits manage their work, the reality is that moving one's work from an ad-hoc system like Excel (or even pen & paper!) means spending a lot of time trying to re-creating what already exists. Getting to "real" data can be daunting. 
+      </p>
+      <p>
+        Apps in other verticals have all kinds of solutions to this, from social media "find your friends" flows to retail recommendation algorithms, but productivity is trickier. Fortunately for the Grantseeker team, the fact that all of our users are registered nonprofits meant we had a trick up our sleeve: public data! 
+      </p>
+      <div class="image">
+        <figure>
+          <picture>
+            <img src="../../img/onboarding-experience-2.png" alt="Onboarding modal: public data found">
+          </picture>
+          <figcaption>
+            Onboarding modal: public data found!
           </figcaption>
         </figure>
       </div>
       <p>
-        One of the biggest, and most potentially fraught decisions in building out our data visualizations was picking appropriate colors. Believe it or not, <strong>The vast majority of data visualizations on the web do not take color seriously.</strong> Accessibility, legibility, and actionability are often thrown out the window for harmonious or “eye-catching” palettes, even in industry-leading products. 
+        Utilizing public-records APIs, we were able to architect a flow that would get a user up and running with their first "real" data in <strong>less than a minute</strong>. Here's how:
       </p>
-      <p>
-        We set out to select 10 categorical colors that were: 
-      </p>
-      <ul>
-        <li>WCAG 2.2 AA-compliant against white</li>
-        <li>Semantically neutral</li>
-        <li>Brand-aligned</li>
-        <li>Differentiable at a distance</li>
-        <li>Differentiable to users with various color-blindness conditions</li>
-      </ul>
+      <ol>
+        <li>A user provides the name of their organization at signup</li>
+        <li>After an intro slide, they're given pre-loaded search results with the opportunity to select their org from the list</li>
+        <li>Using the EIN of the signup org, asynchronous API calls pull in all the funders that have previously given to that org, according to government records.</li>
+        <li>The user selects any or all of the funders they want to keep track of, and adds them all in one click.</li>
+      </ol>
+      <p>Easy peasy! (And an order of magnitude simpler than importing a user's own records).</p>
+      <h3>Keeping it light</h3>
+      <p>To shepherd new users through the flow, I designed a new icon library, extending our UI icons with brand colors and transparency effects. Playful, legible, and on-brand.</p>
+      <div class="image">
+        <figure>
+          <picture>
+            <img src="../../img/grantseeker-onboarding-icons.jpg" alt="Onboarding task icons">
+          </picture>
+          <figcaption>
+            Onboarding task icons
+          </figcaption>
+        </figure>
+      </div>
+      <p>After initial onboarding, users are fed a drip campaign of super-lightweight "tips", to nudge them into socializing the app with their coworkers and further integrate Grantseeker's tools with their day-to-day work.</p>
       <div class="glide glide-1">
         <div class="glide__track" data-glide-el="track">
           <ul class="glide__slides">
             <li class="glide__slide">
               <figure>
                 <picture>
-                  <!-- <source media="(min-width: 800px)" srcset="../../img/dist/1500/fluxx-design-system-documentation-site-components.webp" type="image/webp">
-                  <source media="(max-width: 799px)" srcset="../../img/dist/800/fluxx-design-system-documentation-site-components.webp" type="image/webp"> -->
-                  <img src="../../img/demographics-visualization-colors-1.png" alt="Fluxx UI color palette">
+                  <img src="../../img/onboarding-experience-tips-1.png" alt="Onboarding tip example">
                 </picture>
               </figure>
             </li>
             <li class="glide__slide">
               <figure>
                 <picture>
-                  <!-- <source media="(min-width: 800px)" srcset="../../img/dist/1500/fluxx-design-system-documentation-site-tokens.webp" type="image/webp">
-                  <source media="(max-width: 799px)" srcset="../../img/dist/800/fluxx-design-system-documentation-site-tokens.webp" type="image/webp"> -->
-                  <img src="../../img/demographics-visualization-colors-2.png" alt="Fluxx UI color palette with duplicate colors removed">
+                  <img src="../../img/onboarding-experience-tips-2.png" alt="Onboarding tip example">
                 </picture>
               </figure>
             </li>
             <li class="glide__slide">
               <figure>
                 <picture>
-                  <!-- <source media="(min-width: 800px)" srcset="../../img/dist/1500/fluxx-form-example.webp" type="image/webp">
-                  <source media="(max-width: 799px)" srcset="../../img/dist/800/fluxx-form-example.webp" type="image/webp"> -->
-                  <img src="../../img/demographics-visualization-colors-3.png" alt="Fluxx UI color palette with non-accessible colors removed">
-                </picture>
-              </figure>
-            </li>
-            <li class="glide__slide">
-              <figure>
-                <picture>
-                  <!-- <source media="(min-width: 800px)" srcset="../../img/dist/1500/fluxx-form-example.webp" type="image/webp">
-                  <source media="(max-width: 799px)" srcset="../../img/dist/800/fluxx-form-example.webp" type="image/webp"> -->
-                  <img src="../../img/demographics-visualization-colors-4.png" alt="Final acceptable color palette">
-                </picture>
-              </figure>
-            </li>
-            <li class="glide__slide">
-              <figure>
-                <picture>
-                  <!-- <source media="(min-width: 800px)" srcset="../../img/dist/1500/fluxx-form-example.webp" type="image/webp">
-                  <source media="(max-width: 799px)" srcset="../../img/dist/800/fluxx-form-example.webp" type="image/webp"> -->
-                  <img src="../../img/demographics-visualization-palette-colorblindness.png" alt="Color palette filtered for various color-blindness conditions">
+                  <img src="../../img/onboarding-experience-tips-3.png" alt="Onboarding tip example">
                 </picture>
               </figure>
             </li>
@@ -154,7 +152,7 @@
           <div class="glide__footer">
             <div class="glide__caption">
               <figcaption>
-                Identifying a useable color palette by process of elimination
+                Onboarding tips
               </figcaption>
             </div>
             <div class="glide__navigation">
@@ -169,68 +167,6 @@
         </div>
       </div>
     </div>
-    <h3>
-      Solution
-    </h3>
-    <p>
-      The shipped solution delivered approachable visualizations with one-click access to the underlying data, encoded with comfortably spaced, easily distinguishable stacked bars. Hover states for both the charts and the tables highlight specific segments for legibility. Conditionally styled inline micro-charts in the data table make it easy to determine the biggest segment in each category in cases where the stacked bars might be ambiguous. 
-    </p>
-    <div class="glide glide-2">
-      <div class="glide__track" data-glide-el="track">
-        <ul class="glide__slides">
-          <li class="glide__slide">
-            <div class="video-wrapper" style="padding-bottom:95%;">
-              <video poster="../../img/demographics-reporting-component-cover.png" controls="controls" tabindex="0" autoplay="autoplay" loop="loop">
-                <source src="../../img/demographics-reporting-component-demo.mp4" type="video/mp4">
-                Video tag not supported. Download the video 
-                <a href="../../img/demographics-reporting-component-demo.mp4">here</a>.
-              </video>
-            </div>
-          </li>
-          <li class="glide__slide">
-            <figure>
-              <picture>
-                <!-- <source media="(min-width: 800px)" srcset="../../img/dist/1500/fluxx-design-system-documentation-site-components.webp" type="image/webp">
-                <source media="(max-width: 799px)" srcset="../../img/dist/800/fluxx-design-system-documentation-site-components.webp" type="image/webp"> -->
-                <img src="../../img/demographics-visualization-1.png" alt="Final visualization">
-              </picture>
-            </figure>
-          </li>
-          <li class="glide__slide">
-            <figure>
-              <picture>
-                <!-- <source media="(min-width: 800px)" srcset="../../img/dist/1500/fluxx-design-system-documentation-site-tokens.webp" type="image/webp">
-                <source media="(max-width: 799px)" srcset="../../img/dist/800/fluxx-design-system-documentation-site-tokens.webp" type="image/webp"> -->
-                <img src="../../img/demographics-visualization-2.png" alt="Final visualization with individual data point hovered">
-              </picture>
-            </figure>
-          </li>
-        </ul>
-        <div class="glide__footer">
-          <div class="glide__caption">
-            <figcaption>
-              The final visualization with embedded tabular data
-            </figcaption>
-          </div>
-          <div class="glide__navigation">
-            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
-              Prev
-            </button>
-            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
-              Next
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <p>This version is now live inside Fluxx's Grantmaker platform, used by hundreds of nonprofits on a daily basis. <a href="https://www.fluxx.io/blog/fostering-equitable-grantmaking-integrating-demographic-data-with-grants-management-software" target="blank">Read more about the feature on Fluxx's blog &rarr;</a></p>
-  <h3>
-    Limitations and what's next
-  </h3>
-  <p>
-    While the delivered component is very useful for reviewing grantee organizations one-by-one, the real power in this kind of data comes from aggregation and automation. Executives want to know not just the composition of a single nonprofit, but how the demographics of their entire giving portfolio stack up. Fluxx plans to build out more robust reporting infrastructure to support these use cases, and further cement Grantmaker as data-first platform. 
-  </p>
     </section>
   </main>
   <footer>
@@ -242,10 +178,6 @@
       startAt: 0,
       perView: 1,
       gap: 0,
-      peek: {
-        before: 0,
-        after: 60
-      }
     }).mount();
 
     document.querySelector(".glide-1 .glide__arrow--right").addEventListener("click", () => {
@@ -255,22 +187,9 @@
     document.querySelector(".glide-1 .glide__arrow--left").addEventListener("click", () => {
       slider1.go("<");
     });
-
-    const slider2 = new Glide(".glide-2", {
-      type: "slider",
-      startAt: 0,
-      perView: 1,
-      gap: 0
-    }).mount();
-
-    document.querySelector(".glide-2 .glide__arrow--right").addEventListener("click", () => {
-      slider2.go(">");
-    });
-
-    document.querySelector(".glide-2 .glide__arrow--left").addEventListener("click", () => {
-      slider2.go("<");
-    });
-
+  </script>
+  <script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
   </script>
 </body>
 

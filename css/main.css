@@ -118,6 +118,16 @@ ul{
   }
 }
 
+
+ol{
+  @apply pl-4 mb-6;
+  li{
+    list-style: decimal;
+    list-style-position: outside;
+    @apply mb-2;
+  }
+}
+
 blockquote{
   @apply font-medium block pl-4 mb-6 border-primary-accent italic;
   line-height: 1.68;
