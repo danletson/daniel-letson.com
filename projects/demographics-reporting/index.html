@@ -48,31 +48,33 @@
       <div class="tags">
         UX / Data Visualization / Accessibility / Front-End
       </div>
-      <p><a href="https://fluxx.io" target="blank">Fluxx Grantmaker</a> is an industry leading cloud platform for grants management, used by dozens of the world’s most well-known foundations and charitable nonprofits.</p>
+      <p><a href="https://fluxx.io" target="blank">Fluxx</a> is an industry-leading cloud platform for grants management, used by dozens of the world’s most well-known foundations and charitable nonprofits.As lead product designer, I designed a new component to help funders analyze the demographic makeup of grantee organizations in order to hit institutional goals.</p>
+      <p class="summary-stat"><strong>Problem: </strong>Granting foundations need a way to integrate demographic data into their decision-making process in choosing grantee organizations</p>
+      <p class="summary-stat"><strong>Goal: </strong>An easy-to-scan interface that presents demographic info in an unbiased way</p>
+      <p class="summary-stat"><strong>Team: </strong>Myself and 1 other designer, 1 product manager, 1 engineer</p><br>
+      <p class="summary-stat"><strong>Timeline: </strong>3 months</p>
+
+      <h3>Background</h3>
       <p>
-        In 2023, Fluxx was approached by longtime partner <a href="https://candid.org">Candid</a> with the opportunity to integrate self-reported demographic data from potential grantees, enabling clients to make more informed decisions around giving, and to hit institutional goals for supporting under-represented groups. As an in-house product designer for Fluxx, I worked in collaboration with a small team to plan and deliver a new UI that would present this potentially dense and delicate data in an way that is actionable, accessible, and unbiased.
+        In 2023, Fluxx was approached by longtime partner <a href="https://candid.org">Candid</a> with the opportunity to integrate self-reported demographic data from potential grantees, enabling clients to make more informed decisions around giving, and to hit institutional goals for supporting under-represented groups. The data delivered by Candid is fairly fixed, but determining how it should be "reported" to grant-makers was an opportunity to differentiate.
       </p>
-      <h3>A Sensitive Subject</h3>
+
+      <h3>Process</h3>
       <p>
-        While the data we’d be integrating was fairly fixed, determining how it should be “reported” to decision-makers was an interesting challenge. Grants managers and other nonprofits routinely face scenarios like:
+        From the beginning of the project, it was obvious that charts would be a natural fit for making data scannable, accessible, and useful. However, the sensitive context of the data collected (categorizing people by their race, ethnicity, sexual orientation, etc) and a non-negotiable minimum of WCAG 2.2 AA compliance made this specific use case especially challenging.
       </p>
-      <blockquote>
-        “We’re re-granting government funds, with a mandate to support minority-led nonprofits. How do I make sure my grantees qualify?”
-      </blockquote>
-      <blockquote>
-        “This year, my program pledged 50% of our giving to organizations led by women. Are we meeting that goal?”
-      </blockquote>
-      <blockquote>
-        “We’re a small, locally-focused nonprofit, and we’d like to give to other local charities that represent the diversity of our community.”
-      </blockquote>
+      <div class="image">
+        <figure>
+          <picture>
+            <img src="../../img/candid-demographics-default-visualization.png" alt="Candid demographics default visualization">
+          </picture>
+          <figcaption>
+            An example nonprofit demographic profile as presented on Candid.org
+          </figcaption>
+        </figure>
+      </div>
       <p>
-        Charts are a natural fit for making data scannable, accessible, and useful. However, the sensitive context of the data collected (categorizing people by their race, ethnicity, sexual orientation, etc) and a non-negotiable minimum of WCAG 2.2 AA compliance made this specific use case especially challenging. The underlying data, fetched via public API, was available to all of Fluxx’s competitors, so the user experience was our only chance to differentiate.
-      </p>
-      <h3>
-        Information Overload
-      </h3>
-      <p>
-        Much of the data delivered by Candid is simply counts of employees at a specific nonprofit by demographic category, like <strong>Race & Ethnicity, Gender Identity, Disability Status</strong> etc. Visualizing this kind of categorical data is relatively simple, but starting with a critique of Candid’s own internal examples, a few challenges presented themselves:
+        Much of the data delivered by Candid is simply counts of employees at a specific nonprofit by demographic category, like <strong>Race & Ethnicity, Gender Identity, Disability Status</strong> etc. Visualizing this kind of categorical data is relatively simple, but starting with a critique of Candid’s own internal charts, a few challenges presented themselves:
       </p>
       <ul>
         <li>Many categories, up to ten per chart</li>
@@ -80,18 +82,9 @@
         <li>Use of several semantically charged colors, like red and green</li>
         <li>Accessibility issues like low color contrast and no tabular data</li>
       </ul>
-      <div class="image">
-        <figure>
-          <picture>
-            <img src="../../img/candid-demographics-default-visualization.png" alt="Candid demographics default visualization">
-          </picture>
-          <figcaption>
-            An example nonprofit demographic profile from Candid.org
-          </figcaption>
-        </figure>
-      </div>
+      
       <p>
-        One of the biggest, and most potentially fraught decisions in building out our data visualizations was picking appropriate colors. Believe it or not, <strong>The vast majority of data visualizations on the web do not take color seriously.</strong> Accessibility, legibility, and actionability are often thrown out the window for harmonious or “eye-catching” palettes, even in industry-leading products. 
+        One of the biggest, and most potentially fraught decisions in building out our data visualizations was picking appropriate colors. After lots of competitive research in the space, my design partner and I came to the conclusion that <strong>The vast majority of data visualizations on the web do not take color seriously.</strong> Accessibility, legibility, and actionability are often thrown out the window for harmonious or “eye-catching” palettes, even in industry-leading products. 
       </p>
       <p>
         We set out to select 10 categorical colors that were: 
@@ -161,7 +154,7 @@
       </div>
     </div>
     <h3>
-      Solution
+      Solution & Further Considerations
     </h3>
     <p>
       The shipped solution delivered approachable visualizations with one-click access to the underlying data, encoded with comfortably spaced, easily distinguishable stacked bars. Hover states for both the charts and the tables highlight specific segments for legibility. Conditionally styled inline micro-charts in the data table make it easy to determine the biggest segment in each category in cases where the stacked bars might be ambiguous. 
@@ -212,11 +205,8 @@
     </div>
   </div>
   <p>This version is now live inside Fluxx's Grantmaker platform, used by hundreds of nonprofits on a daily basis. <a href="https://www.fluxx.io/blog/fostering-equitable-grantmaking-integrating-demographic-data-with-grants-management-software" target="blank">Read more about the feature on Fluxx's blog &rarr;</a></p>
-  <h3>
-    Limitations and what's next
-  </h3>
   <p>
-    While the delivered component is very useful for reviewing grantee organizations one-by-one, the real power in this kind of data comes from aggregation and automation. Executives want to know not just the composition of a single nonprofit, but how the demographics of their entire giving portfolio stack up. Fluxx plans to build out more robust reporting infrastructure to support these use cases, and further cement Grantmaker as data-first platform. 
+    While the delivered component is very useful for reviewing grantee organizations one-by-one, the real power in this kind of data comes from aggregation and automation. Executives want to know not just the composition of a single nonprofit, but how the demographics of their entire giving portfolio stack up. Fluxx plans to build out more robust reporting infrastructure to support these use cases in the future.
   </p>
     </section>
   </main>

@@ -39,13 +39,77 @@
     </nav>
   </header>
   <main class="projects fade-in">
+    <section class="poster">
+      <img src="../../img/onboarding-experience-poster.png" aria-role="presentation">
+    </section>
     <section class="project" id="onboarding-experience">
       <span class="story-type">Case Study</span>
       <h2>Onboarding Experience</h2>
       <div class="tags">
         UX / Onboarding / Research
       </div>
-      <p style="margin-bottom:24px;"><a href="https://grantseeker.io" target="blank">Grantseeker</a> is a SaaS productivity tool for nonprofits, which helps them track the grants they've received, communicate with funders, and search for new funding opportunities. Following a freemium model, the platform relies on turning casual users into regular users, and regular users into paying subscribers. As a product designer on the Grantseeker team, I helped to design a new onboarding flow that would get <strong>new users working with real data in less than a minute</strong>. We isolated the initial user actions most highly correlated with stickiness, and used contextual tips to progressively reveal deeper functionality inside the app.</p>
+      <p style="margin-bottom:24px;"><a href="https://grantseeker.io" target="blank">Grantseeker</a> is a SaaS productivity tool for nonprofits, which helps them track the grants they've received, communicate with funders, and search for new funding opportunities. As a product designer on the Grantseeker team, I helped to design a new onboarding flow that would get new users working with real data in less than a minute.</p>
+      <p class="summary-stat"><strong>Problem: </strong>New signups struggled to quickly comprehend the value of the Grantseeker platform</p>
+      <p class="summary-stat"><strong>Goal: </strong>A new onboarding flow to turn casual signups into paying customers in less than 14 days</p>
+      <p class="summary-stat"><strong>Team: </strong>Myself and 1 other designer, 1 product manager, 2 engineers</p><br>
+      <p class="summary-stat"><strong>Timeline: </strong>2 months</p>
+      <div class="image">
+        <figure>
+          <picture>
+            <img src="../../img/onboarding-experience-1.png" alt="Homepage showing onboarding checklist">
+          </picture>
+          <figcaption>
+            Grantseeker "blank slate" homepage with onboarding checklist
+          </figcaption>
+        </figure>
+      </div>
+
+      <h3>Background</h3>
+      <p>Grantseeker's initial open beta was free-to-use for all initial signups. When I joined the team, a pivot to freemium was underway, and the key to turning casual users into paying subscribers was a quick, effective onboarding flow.</p>
+
+      <h3>Process</h3>
+      <p>Our initial research started with identifying the "real" data that grantees cared about most in their offline work, and innovating ways to get it precisely modeled in the app as quickly as possible.</p>
+      <p>My design partner and I collaborated with our engineers to identify the types of record creation that correlated most highly with regular visits, and began to sketch friendly ways to nudge new users towards getting these records set up.</p>
+      
+      <p>Initial versions shepherded new users through value propositions and explained the types of work they'd be doing, along with a homepage checklist.</p>
+
+      <div class="image">
+        <figure>
+          <picture>
+            <img src="../../img/onboarding-initial-mock-1.png" alt="Initial onboarding walkthrough modal">
+          </picture>
+          <figcaption>
+            Initial onboarding walkthrough
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="image">
+        <figure>
+          <picture>
+            <img src="../../img/onboarding-initial-mock-2.png" alt="Initial onboarding homepage checklist">
+          </picture>
+          <figcaption>
+            Initial onboarding homepage checklist
+          </figcaption>
+        </figure>
+      </div>
+
+      <p>Unfortunately, usage analytics revealed that users rarely engaged with these walkthrough steps, and most new signups were not successfully creating "real" data on their first visit. We'd need to cut the effort required even further to acheive the stickiness we were hoping for.</p>
+      
+      <h3>Solution & Further Considerations</h3>
+      <p>
+        After consultation with marketing and engineering, the value proposition flow was cut in favor of an optional video, and the checklist of "must-do" actions was cut from 5 steps to 3.</p>
+      <p>
+        Our biggest innovation in getting users onboarded quickly came from leveraging public data.  Utilizing government public-records APIs, we were able to architect a flow that would get a user up and running with their first "real" data in <strong>less than a minute</strong>, borrowing from quick-start social media patterns like "find your friends" or "who to follow".
+      </p>
+      <ol>
+        <li>A user provides the name of their organization at signup</li>
+        <li>A pre-populated search lets the user select their org from a list</li>
+        <li>An API call pulls in all the funders that have previously given to that org, according to government records.</li>
+        <li>The user creates records for all of their funders in a single click</li>
+      </ol>
+
       <figure style="margin-bottom: 24px;">
         <div class="video">
           <div class="video-wrapper" style="padding-bottom:64.7%;">
@@ -57,40 +121,9 @@
           </div>
         </div>
         <figcaption>
-          The Grantseeker post-signup flow
+          The re-factored onboarding flow
         </figcaption>
       </figure>
-      <h3>
-        Starting with the data
-      </h3>
-      <p>
-        As with any customer-facing project, we'd have to start with the goal (a new signup becoming a return user) and work backwards. But what did it mean to be "fully onboarded" and likely to return? In the case of Grantseeker, a productivity tool that lets users structure their day-to-day work in a new way, it meant having real data in the app that models precisely the work they already manage.  
-      </p>
-      <p>
-        My design partner and I collaborated with our engineers to identify patterns of our beta users' data that are most highly correlated with regular use (multiple visits per week over a period of 3 months). Un-surprisingly, the all the biggest indicators of regular use came down to "having more records in the system." We winnowed down the list of potential record-creation / customization categories to a "top 3", and worked towards the goal of getting our new users established with all three in less than 10 minutes from signup. Here's the list:
-      </p>
-      <ol>
-        <li>Create a "funder" (a "funder" is a parent record to a grant)</li>
-        <li>Create an "grant" (the core of the app, related to a single "funder")</li>
-        <li>Create a "task" (a "to-do" for the user themselves or another person within their account, this is the most sticky, but can't exist without the first two!)</li>
-      </ol>
-      <div class="image">
-        <figure>
-          <picture>
-            <img src="../../img/onboarding-experience-1.png" alt="Homepage showing onboarding checklist">
-          </picture>
-          <figcaption>
-            Homepage showing onboarding checklist
-          </figcaption>
-        </figure>
-      </div>
-      <h3>A little open-source magic</h3>
-      <p>
-        One of the trickiest things about onboarding users to Grantseeker specifically is the "terror of the blank page." While the platform has all kinds of great tools to help nonprofits manage their work, the reality is that moving one's work from an ad-hoc system like Excel (or even pen & paper!) means spending a lot of time trying to re-creating what already exists. Getting to "real" data can be daunting. 
-      </p>
-      <p>
-        Apps in other verticals have all kinds of solutions to this, from social media "find your friends" flows to retail recommendation algorithms, but productivity is trickier. Fortunately for the Grantseeker team, the fact that all of our users are registered nonprofits meant we had a trick up our sleeve: public data! 
-      </p>
       <div class="image">
         <figure>
           <picture>
@@ -101,17 +134,6 @@
           </figcaption>
         </figure>
       </div>
-      <p>
-        Utilizing public-records APIs, we were able to architect a flow that would get a user up and running with their first "real" data in <strong>less than a minute</strong>. Here's how:
-      </p>
-      <ol>
-        <li>A user provides the name of their organization at signup</li>
-        <li>After an intro slide, they're given pre-loaded search results with the opportunity to select their org from the list</li>
-        <li>Using the EIN of the signup org, asynchronous API calls pull in all the funders that have previously given to that org, according to government records.</li>
-        <li>The user selects any or all of the funders they want to keep track of, and adds them all in one click.</li>
-      </ol>
-      <p>Easy peasy! (And an order of magnitude simpler than importing a user's own records).</p>
-      <h3>Keeping it light</h3>
       <p>To shepherd new users through the flow, I designed a new icon library, extending our UI icons with brand colors and transparency effects. Playful, legible, and on-brand.</p>
       <div class="image">
         <figure>
@@ -119,7 +141,7 @@
             <img src="../../img/grantseeker-onboarding-icons.jpg" alt="Onboarding task icons">
           </picture>
           <figcaption>
-            Onboarding task icons
+            Final onboarding task icons
           </figcaption>
         </figure>
       </div>
@@ -167,6 +189,7 @@
         </div>
       </div>
     </div>
+    <p>The new onboarding flow is highly effective at getting new users set up quickly, but the built-in logic is rather simplistic. If I had more time and resources on the project, I would have loved to further investigate branching flows for different types of users, prospect scoring, and smarter targeting logic for nudges. </p>
     </section>
   </main>
   <footer>
@@ -178,6 +201,10 @@
       startAt: 0,
       perView: 1,
       gap: 0,
+      peek: {
+        before: 50,
+        after: 50
+      }
     }).mount();
 
     document.querySelector(".glide-1 .glide__arrow--right").addEventListener("click", () => {
