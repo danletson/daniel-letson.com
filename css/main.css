@@ -25,7 +25,7 @@ html{
 
 
 body{
-@apply font-text text-primary-dark font-light pt-12 px-4;
+@apply font-text text-primary-dark font-light pt-12;
 background: white;
 }
 
@@ -86,12 +86,18 @@ strong{
 }
 
 .image{
-  @apply mb-12;
+  @apply my-12;
+}
+
+.home .image img, .home .video{
+  box-shadow: none;
+  background: lightskyblue;
+  @apply p-4;
 }
 
 .image img, .video{
-  background: lightskyblue;
-  @apply p-4 mb-2;
+  /* box-shadow: 0px 2px 5px #260128; */
+  @apply mb-2;
 }
 
 .video-wrapper{
@@ -151,11 +157,11 @@ body{
 }
 
 .home-intro{
-  @apply max-w-sm mx-auto px-4;
+  @apply max-w-lg mx-auto px-4;
 }
 
 header{
-  @apply max-w-2xl w-full mx-auto;
+  @apply max-w-3xl w-full mx-auto;
 }
 
 @keyframes fadeInUp {
@@ -208,8 +214,12 @@ main.home{
   @apply mt-12;
 }
 
+main.resume{
+  @apply pb-0 max-w-3xl mx-auto;
+}
+
 .resume header{
-  @apply mb-12;
+  @apply mb-12 max-w-3xl w-full;
 }
 
 .resume h1{
@@ -224,16 +234,28 @@ main.home{
   @apply mt-0 mb-2 font-semibold;
 }
 
+section, nav{
+  @apply px-4;
+}
+
 .resume section, .resume .entry{
-  @apply mb-12;
+  @apply mb-12 max-w-2xl;
 }
 
 section.project, section.projects{
-  @apply pt-12 mt-12 pb-0 max-w-2xl mx-auto;
+  @apply mt-12 pb-0 max-w-3xl mx-auto;
 }
 
 section.projects{
   @apply pt-12 border-t border-primary-accent;
+}
+
+section.poster{
+  @apply text-center bg-primary-accent bg-opacity-30 py-3;
+}
+
+section.poster>img{
+  @apply mx-auto w-full max-w-5xl;
 }
 
 .project-entry{
@@ -242,7 +264,7 @@ section.projects{
 }
 
 .project-entry .image{
-  @apply md:w-2/3 mb-0;
+  @apply md:w-2/3 my-0;
 }
 
 .project-entry .image img{
@@ -254,12 +276,18 @@ section.projects{
   background: aliceblue;
 }
 
+.project .summary-stat{
+  @apply px-3 py-2 inline-block mb-2;
+  border-left: 3px solid lightskyblue;
+  background-color: aliceblue; 
+}
+
 .resume .subhead{
   @apply italic mb-2;
 }
 
 .stripe{
-  @apply flex items-start max-w-2xl mx-auto;
+  @apply flex items-start max-w-3xl mx-auto;
   flex-wrap: wrap;
   & .image{
     @apply mb-12;
@@ -269,22 +297,22 @@ section.projects{
   }
   &[data-item-count="1"]{
     & .image{
-      @apply w-full max-w-2xl mx-auto;
+      @apply w-full max-w-3xl mx-auto;
     }
   }
   &[data-item-count="2"]{
     & .image{
-      @apply w-full max-w-2xl mx-auto;
+      @apply w-full max-w-3xl mx-auto;
     }
   }
   &[data-item-count="3"]{
     & .image{
-      @apply w-full max-w-2xl mx-auto;
+      @apply w-full max-w-3xl mx-auto;
     }
   }
   &[data-item-count="4"]{
     & .image{
-      @apply w-full max-w-2xl mx-auto;
+      @apply w-full max-w-3xl mx-auto;
     }
   }
 }
@@ -300,7 +328,7 @@ figcaption{
 }
 
 .project-intro{
-  @apply max-w-2xl mx-auto mb-12;
+  @apply max-w-3xl mx-auto mb-12;
 }
 
 .story-type{
@@ -329,7 +357,7 @@ h2 + .tags{
 }
 
 .two-column-container{
-  @apply flex max-w-2xl mx-auto;
+  @apply flex max-w-3xl mx-auto;
   flex-wrap: wrap;
 }
 
@@ -413,7 +441,7 @@ nav .header-links .nav-item:first-child{
 
 
 .glide{
-  @apply mb-12;
+  @apply my-12;
   background: lightskyblue;
 }
 

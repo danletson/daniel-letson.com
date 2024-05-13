@@ -39,47 +39,27 @@
     </nav>
   </header>
   <main class="projects fade-in">
+    <section class="poster">
+      <img src="../../img/data-explorer-poster-header.png" aria-role="presentation">
+    </section>
     <section class="project" id="data-explorer">
       <span class="story-type">Case Study</span>
       <h2>Data Explorer</h2>
       <div class="tags">
-        UX / Data Visualization
+        UX / Research / Data Visualization
       </div>
-      <p><a href="https://fluxx.io" target="blank">Fluxx Grantmaker</a> is a cloud-based relational database software for nonprofit organizations, which supports deep customization and serves dozens of different user roles. Think Salesforce levels of complexity. There are custom record types, bespoke workflows, and a primary UI that’s akin to a super-charged Kanban board, with hundreds of interrelated records visible at once. </p>
-      <div class="image">
-        <figure>
-          <picture>
-            <img src="../../img/grantmaker-avant-dashboard.png" alt="A simple Fluxx Grantmaker dashboard">
-          </picture>
-          <figcaption>
-            A simple Fluxx Grantmaker dashboard
-          </figcaption>
-        </figure>
-      </div>
-      <p>
-        The primary unit of Grantmaker’s UI is a “card”, a filtered list of records. Most daily users build up dashboards of cards, laid out in a specific order to support their approval workflows. These cards can be simple list views, tables, summary statistics, or data visualizations. 
-      </p>
-      <p>
-        Advanced users have access to robust reporting tools, but when most staff need answers to questions like “How much total giving has your program done so far this year?”, many were lost and frustrated. In interviewing dozens of daily non-admin users, we repeatedly heard complaints like:
-      </p>
-      <blockquote>
-        “My admin only allows us to run reports, not create them. Often the data I want is missing, but I don’t know how to get to it”
-      </blockquote>
-      <blockquote>
-        “I have some access to reporting, but it’s intimidating. There are hundreds of fields on each record. I don’t know where to start to find my data.”
-      </blockquote>
-      <blockquote>
-        “Sometimes I’ll export everything and just delete 90% of it, it’s easier than trying to build out what I need”
-      </blockquote>
-      <p>
-        As an in-house product designer, I set out to re-factor Grantmaker's existing card views to support these kinds of requests. 
-      </p>
-      <h3>
-        Bridging the Gap
-      </h3>
-      <p>
-        Two of Grantmaker’s existing card views provided an ideal starting point, though they were both in need of a major overhaul. The table view showed the data, sans styling and other distracting clutter. A perfect place to begin an export. But the columns are fixed, determined by administrators. The chart view gives trend insights at a glance, but the charts themselves are more flash than substance, and suffering from a serious lack of flexibility. 
-      </p>
+      <p><a href="https://fluxx.io" target="blank">Fluxx</a> is a cloud-based relational database software for nonprofit organizations that supports deep customization and Salesforce levels of complexity. As a product designer for Fluxx, I conducted user research and prototyped new interfaces to help daily users export their data quickly and easily.</p>
+      <p class="summary-stat"><strong>Problem:</strong>Daily users can't get the data they need out of the platform because they often don't understand how their data is structured</p>
+      <p class="summary-stat"><strong>Goal:</strong>A new set of patterns for exploring, visualizing, and exporting data for users that don't have access to reporting tools.</p>
+      <p class="summary-stat"><strong>Team:</strong> Myself and 1 other designer, 1 product manager, product and engineering leadership as stakeholders</p>
+      <p class="summary-stat"><strong>Timeline:</strong> 3 months</p>
+
+
+      <h3>Background</h3>
+
+      <p>The primary unit of Grantmaker’s UI is a “card”, a filtered list of records. Most daily users build up dashboards of cards, laid out in a specific order to support their approval workflows. These cards can be simple list views, tables, summary statistics, or data visualizations.</p>
+      <p>The data that underlies these card dashboards is extremely specific and complex, and many users have a hard time analyzing the data that makes up their day-to-day-work. Advanced users have access to robust reporting tools, but when most staff need answers to questions like “How much total giving has my program done so far this year?”, many were lost and frustrated.</p>
+
       <div class="image">
         <figure>
           <picture>
@@ -90,19 +70,89 @@
           </figcaption>
         </figure>
       </div>
+
+
+      <h3>Process</h3>
+      <p>To understand the issues Fluxx users were having in finding and leveraging their data, the team set up a series of interview-style research sessions with volunteer users. My design partner and I conducted 7, 45-minute interactive sessions via Zoom. We encouraged our interviewees to narrate their thought process and pain points as they navigated a report-creation workflow. We took turns leading the sessions and taking detailed notes. </p>
+
+      <div class="image">
+        <figure>
+          <picture>
+            <img src="../../img/data-explorer-research-call.png" alt="A typical user research call">
+          </picture>
+          <figcaption>
+            A typical user research call
+          </figcaption>
+        </figure>
+      </div>
+
+      <p>By the end of this interview process, we'd heard dozens of complaints like:</p>
+      <blockquote>
+        “My admin only allows us to run reports, not create them. Often the data I want is missing, but I don’t know how to get to it”
+      </blockquote>
+      <blockquote>
+        “I have some access to reporting, but it’s intimidating. There are hundreds of fields on each record. I don’t know where to start to find my data.”
+      </blockquote>
+      <blockquote>
+        “Sometimes I’ll export everything and just delete 90% of it, it’s easier than trying to build out what I need”
+      </blockquote>
+
       <p>
-        Helping our daily users find and deliver simple metrics about their records was a matter of combining multiple interfaces that were formally different but categorically the same. Building a chart summary doesn’t instill much confidence if you can’t see the data underneath. And rendering exported data just to delete it later is a waste of time, both on the server side and for the user. 
+        The collected insights were transcribed from the interview notes, anonymized, and organized by theme in Airtable for further analysis.
       </p>
-      <h3>Solution</h3>
+
+      <div class="image">
+        <figure>
+          <picture>
+            <iframe src="https://airtable.com/embed/shrZ0RBvQtcCFuP4b?backgroundColor=red&viewControls=on" frameborder="0" width="100%" height="500"></iframe>
+          </picture>
+          <figcaption style="margin-top: 24px;">
+            Airtable database of anonymized feedback from customer interviews, organized by theme and insight.
+          </figcaption>
+        </figure>
+      </div>
+
+      <p>"Ease of use" emerged as the most popular pain point theme from our user research, so I started sketching on ways to help users find the data they want, and generate reports seamlessly.</p>
+
+      <div class="image">
+        <figure>
+          <picture>
+            <img src="../../img/report-creation-sketching-1.png" alt="Example report creation workflow sketch">
+          </picture>
+          <figcaption>
+            Example report creation workflow sketch
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="image">
+        <figure>
+          <picture>
+            <img src="../../img/report-creation-sketching-2.png" alt="Example report creation workflow sketch">
+          </picture>
+          <figcaption>
+            Example report creation workflow sketch
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="image">
+        <figure>
+          <picture>
+            <img src="../../img/field-finding-wireframes.png" alt="Field list wireframes">
+          </picture>
+          <figcaption>
+            Example field list wireframe sketches
+          </figcaption>
+        </figure>
+      </div>
+
+
+      <h3>
+        Solution & Further Considerations
+      </h3>
       <p>
-        The revamped data visualizations addressed a number of design problems that kept the old “chart view” from being truly useful. Here’s how:
-        <ul>
-          <li>Making charts easier to read with direct labeling</li>
-          <li>Reducing the superfluous use of color</li>
-          <li>Dynamic timespans for quick data exploration</li>
-          <li>Re-flow of controls</li>
-          <li>Summary statistics for simple double-checking (does this add up to what I’d expect? Are my filter settings right?)</li>
-        </ul>
+        Helping our daily users find and deliver simple metrics about their records was a matter of combining multiple interfaces that were formally different but categorically the same. The final designs involved several new "wizard" flows to guide users from their lists of records through to a streamlined report building interface, along with an overhaul of the system's standard data visualizations and field lists. 
       </p>
       <div class="glide glide-1">
         <div class="glide__track" data-glide-el="track">
@@ -168,6 +218,7 @@
         </div>
       </div>
     </div>
+    <p>Although the research was well-conducted and well-considered, the project was de-prioritized due to complexity, with engineering resources diverted to developing a third-party platform for data analysis and reporting. A disappointing outcome, but not an unusual one for a resource-constrained organization. If the project were to be re-considered, I would have liked to explore a solution that integrated more "wizard"-like flows to guide users through reporting, along with robust user acceptance testing. </p>
     </section>
   </main>
   <footer>
@@ -178,7 +229,11 @@
       type: "slider",
       startAt: 0,
       perView: 1,
-      gap: 0
+      gap: 0,
+      peek:{
+        before: 40,
+        after: 40
+      }
     }).mount();
 
     document.querySelector(".glide-1 .glide__arrow--right").addEventListener("click", () => {

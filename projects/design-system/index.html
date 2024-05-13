@@ -38,14 +38,104 @@
     </nav>
   </header>
   <main class="projects fade-in">
+    <section class="poster">
+      <img src="../../img/design-system-poster-header.png" aria-role="presentation">
+    </section>
     <section class="project" id="design-system">
       <span class="story-type">Case Study</span>
       <h2>Design System</h2>
       <div class="tags">
         UI / Accessibility / Strategy
       </div>
-      <p><a href="https://fluxx.io" target="blank">Fluxx</a> is one of the world's most popular platforms for grants management. As an in-house senior product designer, I lead the creation of a design system to standardize UI and UX patterns for a mature, data-dense SaaS platform with more than 500 institutional clients and tens of thousands of daily users. I established platform-agnostic design tokens, oversaw the development of component prototypes, built and enforced semantic and accessibility guidelines, and architected integration and deployment flows.</p><p style="margin-bottom:24px;">Read on to learn how I tackled this gargantuan task, or <a href="#figmas">skip ahead to the Figma files</a>.</p>
-      <figure style="margin-bottom: 24px;">
+      <p><a href="https://fluxx.io" target="blank">Fluxx</a> is one of the world's most popular platforms for grants management. As an in-house senior product designer, I lead the creation of a design system to standardize UI and UX patterns for a mature, data-dense SaaS platform with more than 500 institutional clients and tens of thousands of daily users.</p>
+      <p class="summary-stat"><strong>Problem:</strong> A fragmented user experience across client-configured sites</p>
+      <p class="summary-stat"><strong>Goal:</strong> Standardization of common UI elements and streamlined development of new features</p>
+      <p class="summary-stat"><strong>Team:</strong> 2 designers, 1 product manager, product and engineering leadership as stakeholders</p>
+      <p class="summary-stat"><strong>Timeline:</strong> 6 months from planning to first implementation initiative</p>
+
+      <h3>Background</h3>
+
+      <p>Fluxx began as bespoke database software for a single nonprofit, growing over nearly a decade into an extremely robust and flexible SaaS platform, handling everything from form-building, to customer management, to custom Ruby scripting. During that process, tight timelines and a lack of design leadership had lead to a fragmented UI that was frustrating for users and diffucult for engineers to maintain.</p>
+
+      <div class="image">
+        <figure>
+          <picture>
+            <img src="../../img/design-system-dashboard-before.png" alt="A typical Fluxx dashboard">
+          </picture>
+          <figcaption>
+            A typical Fluxx dashboard
+          </figcaption>
+        </figure>
+      </div>
+
+
+      <h3>Process</h3>
+      <p>In preparation for the development of a design system, my design partner and I started with a 2-week design sprint. We audited the existing app for usability issues, explored product parallels, and mocked up "ideal" states for the most common UX patterns.</p>
+
+      <div class="image">
+        <figure>
+          <picture>
+            <img src="../../img/design-system-design-audit.png" alt="An annotated view of a Fluxx dashboard during the design audit">
+          </picture>
+          <figcaption>
+            An annotated view of a Fluxx dashboard during the design audit
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="image">
+        <figure>
+          <picture>
+            <img src="../../img/design-system-design-sprint-before-and-after-2.png" alt="Dashboard navigation before and after design sprint">
+          </picture>
+          <figcaption>
+            Dashboard navigation before and after design sprint
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="image">
+        <figure>
+          <picture>
+            <img src="../../img/design-system-dashboard-after.png" alt="A re-designed Fluxx dashboard, the result of a two-week design sprint">
+          </picture>
+          <figcaption>
+            A re-designed Fluxx dashboard, the result of a two-week design sprint
+          </figcaption>
+        </figure>
+      </div>
+
+      <p>The results of the design sprint were socialized with product and technical leadership, and lead to the creation of the platform's first full-on design system.</p>
+      
+      <p>From this holistic view, we set about isolating and standardizing the building blocks of a universally applicable design system. Spacing, colors, and typography guidelines were built in Figma, and used as the foundation for the development of subsequent components and patterns. Eventually, these values were published as platform-agnostic design tokens, to streamline the building process for our developers.</p>
+
+      <div class="image">
+        <figure>
+          <picture>
+            <iframe title="Embeded Figma design file - Fluxx design system tokens library" style="border: 1px solid rgba(0, 0, 0, 0.1); margin-bottom: 12px;" width="100%" height="550" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FpiBJKA11MuyFoPx5eaeWw2%2FFluxx-Design-System---Design-Tokens%3Ftype%3Ddesign%26node-id%3D1473%253A8%26mode%3Ddesign%26t%3DdsPsOEx1RR2Xc39B-1" allowfullscreen=""></iframe>
+          </picture>
+          <figcaption>
+            Fluxx Design System Tokens Library
+          </figcaption>
+        </figure>
+      </div>
+
+      <p>While building a new front end from scratch would have been ideal, there weren't enough engineering resources to support such a giant project. Instead, the design team collaborated with product managers to isolate upcoming new features to start building design-system aligned components opportunistically. This way, every sprint included work to flesh out the React library of design system components and patterns.</p>
+
+      <div class="image">
+        <figure>
+          <picture>
+            <img src="../../img/design-system-component-alignment.png" alt="An example component, re-aligned to design system standards">
+          </picture>
+          <figcaption>
+            An example component, re-aligned to design system standards
+          </figcaption>
+        </figure>
+      </div>
+
+      <p>I worked closely with engineers to fine-tune the structure of the built prototypes, and contributed usability tweaks to the developed prototypes directly via Git. I also designed a documentation site for Fluxx engineers, with live examples of React components and exportable code snippets.</p>
+
+      <figure style="margin-bottom: 48px; margin-top: 48px;">
         <div class="video">
           <div class="video-wrapper" style="padding-bottom:55%;">
             <video poster="../../img/design-system-cover.png" controls="controls" tabindex="0" autoplay="autoplay" loop="loop">
@@ -59,101 +149,13 @@
           The Fluxx Design System interactive documentation site
         </figcaption>
       </figure>
-      <h3>Background: A Fragmented History</h3>
 
-      <p>Fluxx began as bespoke database software for a single nonprofit, growing over nearly a decade into an extremely robust and flexible SaaS platform, handling everything from form-building, to customer management, to custom Ruby scripting. In the early days, as the company strove to acquire nonprofit clients, customer demands for new functionality drove the product roadmap, and “more customization” was always at the top of the list. In time, the ability of Fluxx’s clients to dictate the look and feel of their interfaces lead to a few serious problems:
-      </p>
-      <p>A lack of legibility or accessibility guidelines in critical UX scenarios like grantee applications:</p>
-      <blockquote>
-        “The application form says “click the green button to save your progress” , but my screen reader can’t find it”
-      </blockquote>
-      <p>Difficulty writing generic documentation of core functionality:</p>
-      <blockquote>
-        “Support told me to look for the <em>amount recommended</em> field, but our system doesn’t have a field with that label”
-      </blockquote>
-      <p>An inability to enforce industry best practices:</p>
-      <blockquote>“I know asking grantees for this information is a burden, but that’s what we’ve always done, so we’re going to need to build 8 more fields to collect it”</blockquote>
-
-      <p>On top of all that, a decade-plus of bespoke feature development made for a fragmented front-end codebase, where some niche components may lag years behind others in terms of UI. When I introduced the design system initiative in 2022, every engineer at the company was excited to bring more consistency to the process, but strategizing towards that goal was a big undertaking.</p>
-
-      <h3>Finding the right approach</h3>
-      
-      <p>Building a design system from scratch is one thing, but introducing a new design system into a complex suite of products is another problem entirely. As much as the Fluxx devs would have loved the chance to modernize the whole platform at once, such an undertaking would have meant pausing long-standing commitments for months if not multiple quarters. A more pragmatic approach was required.</p>
-
-      <p>Instead of overwhelming our engineers with a months-long backlog of components to build and test, I negotiated a partial commitment from the team’s best React developer, plucking individual components from upcoming features on the product roadmap. This just-in-time strategy meant that steady progress towards reusable components was made every sprint, and that each released feature got us one step closer to a complete UI library. No time was wasted fighting for resources around speculative components, and new features painted a clear vision for the future of the product. Win-win.</p>
-      
-      <h3>Context is everything</h3>
-
-      <p>As for the design system itself, my design partner and I started with a few basic commitments:</p>
-      <ul>
-        <li>All styles must be composable via tokens, conforming to the <a href="https://www.w3.org/community/design-tokens/">W3C Design Tokens working standard</a></li>
-        <li>Universal WCAG 2.2 AA accessibility compliance with no exceptions</li>
-        <li>Elements should be as generic and simple as possible, but enhanced where “contextually appropriate”</li>
-      </ul>
-      <p>That last point is a unique one that I’d like to highlight.</p>
-      <p>Fluxx is a productivity tool at heart, so as we began to research our approach, form controls were a natural starting point. Something as simple as a <strong>button</strong> is a great example of a generic component. Whether it’s on a grantee application form, an admin settings page, or a staff member login, the ingredients are very similar. Sure, you might have a variant with only an icon or a different semantically-encoded color, but the pieces are all there.</p>
-      <p>
-       By comparison, consider the humble <strong>text input</strong>. Across Fluxx’s many features, text inputs are used in dozens of contexts, each with a unique audience and unique complications. For a site administrator, scanning through form fields to update a grantee’s zip code might happen a dozen times a day. <strong>For a brand-new user filling out a grant application, every single text input is a minefield, another high-stress opportunity for rejection</strong>. Thinking empathetically about these very different contexts was paramount to building a truly useful design system.
-      </p>
-      <p>
-        Apart from shared / generic form components, three common contexts emerged: 
-      </p>
-      <ul>
-        <li>
-          <strong>Control:</strong><br>
-          Space-efficient, group-able, built for admins and experienced staff
-        </li>
-        <li>
-          <strong>Form-filling:</strong><br>
-          Highly scannable, highly legible, with unified label/input groupings, large click targets, generous clear space, and visually distinct states.
-        <li>
-          <strong>Data-filling:</strong><br>
-          Ultra low-profile with implicit labeling, for use in data tables.
-        </li>
-      </ul>
-      <div class="image">
-        <figure>
-          <picture>
-            <img src="../../img/fluxx-form-example.png" alt="Fluxx design system: form context inputs in various states
-            ">
-          </picture>
-          <figcaption>
-            Fluxx design system: form context inputs in various states
-          </figcaption>
-        </figure>
-      </div>
-      <h3 id="figmas">Putting it all together</h3>
+      <h3>Solution & Further Considerations</h3>
       <p>After designing and compiling hundreds of individual patterns and variants, the Fluxx design system is now in regular use, powering dozens of shipped features. The library comprises <a href="https://www.figma.com/file/S2hU0lc4xaZ86RXlx5SOyL/Fluxx-Design-System---Tokens?type=design&node-id=314%3A6166&mode=design&t=pN6YOFSdeHrut3D1-1">portable design tokens</a>, <a href="https://www.figma.com/file/cgXV2WmZILbfuEejyaJeNU/Fluxx-Design-System---Components-(Community)?type=design&node-id=569%3A1880&mode=design&t=51ncckBOSb1CvNMM-1"></a>UI components, a CI/CD pipeline for automated and manual QA, and an internal documentation site. New feature development has massively accelerated, and even retrofitting legacy components takes less time thanks to the tokenization of core styles.</p>
-      <div class="image">
-        <figure>
-          <picture>
-            <iframe title="Embeded Figma design file - Fluxx design system tokens library" style="border: 1px solid rgba(0, 0, 0, 0.1); margin-bottom: 12px;" width="100%" height="550" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FpiBJKA11MuyFoPx5eaeWw2%2FFluxx-Design-System---Design-Tokens%3Ftype%3Ddesign%26node-id%3D1473%253A8%26mode%3Ddesign%26t%3DdsPsOEx1RR2Xc39B-1" allowfullscreen=""></iframe>
-          </picture>
-          <figcaption>
-            Fluxx Design System Tokens Library
-          </figcaption>
-        </figure>
-      </div>
-      <div class="image">
-        <figure>
-          <picture>
-            <iframe title="Embeded Figma design file - Fluxx design system shared components" style="border: 1px solid rgba(0, 0, 0, 0.1); margin-bottom: 12px;" width="100%" height="550" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F6q14DMMISGkPFRgDUlE55o%2FFluxx-Design-System---Shared-Components%3Ftype%3Ddesign%26node-id%3D2953%253A948%26mode%3Ddesign%26t%3DUUujp9GvwRWOO2dx-1" allowfullscreen=""></iframe>
-          </picture>
-          <figcaption>
-            Fluxx Design System Shared Components Library
-          </figcaption>
-        </figure>
-      </div>
-      <div class="image">
-        <figure>
-          <picture>
-            <iframe title="Embeded Figma design file - Fluxx design system form inputs" style="border: 1px solid rgba(0, 0, 0, 0.1); margin-bottom: 12px;" width="100%" height="550" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FigWPlVoc0DFp1MkOFLDIEJ%2FForm-Inputs---Fluxx-Design-System%3Ftype%3Ddesign%26node-id%3D2953%253A948%26mode%3Ddesign%26t%3Dpc2DVZm4bZNurqpG-1" allowfullscreen=""></iframe>
-          </picture>
-          <figcaption>
-            Fluxx Design System Form Inputs Library
-          </figcaption>
-        </figure>
-      </div>
+
+      <p>While components built with the new design system have been well-received by users, I would have liked more time in the process to put more holistic examples of design system patterns through user acceptance testing. The incremental approach that Fluxx favored was a business necessity, but being able to build a brand-new front end would have had a much bigger impact on the user experience, and would have allowed for true A/B testing of new and old components.</p>
+
+
     </section>
   </main>
   <footer>
