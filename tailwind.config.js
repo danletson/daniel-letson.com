@@ -4,6 +4,7 @@ module.exports = {
     extend: {
       colors: {
         'transparent': 'transparent',
+        'primary-light': '#FEEBFF',
         'primary-dark': '#260128',
         'primary-accent': 'turquoise',
         'secondary-dark': '#4E6B8F',
@@ -47,7 +48,7 @@ module.exports = {
         'monospace',
       ],
       'text': [
-        'Inter',
+        'Rethink Sans',
         'system-ui',
         'BlinkMacSystemFont',
         '-apple-system',
@@ -62,7 +63,7 @@ module.exports = {
         'sans-serif',
       ],
       'display': [
-        'Inter',
+        'Baustrasse Bold',
         'system-ui',
         'BlinkMacSystemFont',
         '-apple-system',
