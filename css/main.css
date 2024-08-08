@@ -215,8 +215,9 @@ body{
 }
 
 .home-intro .background-image{
-  fill: #150016;
+  fill: #FEEBFF;
   position: absolute;
+  opacity: 0.1;
   height: 32rem;
   top: -8rem;
   left: -6rem;
@@ -272,7 +273,7 @@ main{
 }
 
 main.home{
-  @apply mt-12;
+  @apply mt-12 mb-0;
 }
 
 main.resume{
@@ -479,10 +480,10 @@ h2 + .tags{
 }
 
 footer{
-  position: fixed;
-  bottom: 0px;
+  /* position: absolute;
+  bottom: 0px; */
   width: 100%;
-  @apply py-2 bg-primary-dark text-primary-light;
+  @apply py-2 text-primary-light;
 }
 
 .marquee {
@@ -597,7 +598,7 @@ nav .header-links {
 }
 
 nav .header-links .nav-item, nav>a, button{
-  @apply mr-4;
+  @apply mr-6;
   transition: all .2s ease-out;
   border-bottom: 1px solid transparent;
 }

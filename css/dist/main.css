@@ -896,8 +896,9 @@ body {
 }
 
 .home-intro .background-image{
-  fill: #150016;
+  fill: #FEEBFF;
   position: absolute;
+  opacity: 0.1;
   height: 32rem;
   top: -8rem;
   left: -6rem;
@@ -957,6 +958,7 @@ main {
 
 main.home {
   margin-top: 3rem;
+  margin-bottom: 0px;
 }
 
 main.resume {
@@ -1262,11 +1264,9 @@ h2 + .tags{
 }
 
 footer{
-  position: fixed;
-  bottom: 0px;
+  /* position: absolute;
+  bottom: 0px; */
   width: 100%;
-  --tw-bg-opacity: 1;
-  background-color: rgb(38 1 40 / var(--tw-bg-opacity));
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   --tw-text-opacity: 1;
@@ -1417,7 +1417,7 @@ nav .header-links {
 }
 
 nav .header-links .nav-item, nav>a, button {
-  margin-right: 1rem;
+  margin-right: 1.5rem;
   transition: all .2s ease-out;
   border-bottom: 1px solid transparent;
 }
