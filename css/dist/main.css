@@ -1117,8 +1117,8 @@ section.poster>img {
 }
 
 #demographics-reporting .image video{
-  position: relative;
-  top: -84px;
+  /* position: relative;
+  top: -84px; */
 }
 
 .project-entry .image img {
