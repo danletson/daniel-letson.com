@@ -1076,7 +1076,7 @@ section.poster {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   text-align: center;
-  background: yellow;
+  background: #21D4FD;
 }
 
 section.poster>img {
@@ -1142,6 +1142,7 @@ section.poster>img {
   padding-right: 0.75rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  background: yellow;
 }
 
 .resume .subhead {

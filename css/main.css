@@ -356,7 +356,7 @@ section.projects#side-projects{
 
 section.poster{
   @apply text-center py-3;
-  background: yellow;
+  background: #21D4FD;
 }
 
 section.poster>img{
@@ -404,6 +404,7 @@ section.poster>img{
 
 .project .summary-stat{
   @apply px-3 py-2 inline-block mb-2;
+  background: yellow;
 }
 
 .resume .subhead{
