@@ -41,8 +41,8 @@ body{
 }
 
 h1{
-  font-family: 'Baustrasse Bold Oblique';
-  font-size: 60px;
+  /* font-family: 'Baustrasse Bold Oblique'; */
+  @apply text-4xl;
   line-height: 1;
   @apply relative text-white mb-2;
 }
@@ -66,7 +66,6 @@ h1 .sticker{
 
 h2,h3,h4{
     @apply font-text mt-0 mb-6;
-    letter-spacing: -0.5px;
 }
 
 h1,h2,h3,h4,p{
@@ -77,10 +76,12 @@ h1,h2,h3,h4,p{
     @apply text-3xl font-medium;
 } */
 h2{
-    @apply text-2xl font-medium mb-8;
+    @apply text-xl mb-8;
+    font-variation-settings: 'wght' 400;
 }
 h3{ 
-    @apply text-xl font-medium mt-12;
+    @apply text-xl mt-12;
+    font-variation-settings: 'wght' 500;
 }
 
 a{
@@ -90,21 +91,36 @@ a{
 }
 
 a.cta{
-  @apply px-4 pb-1 pt-2 rounded-full text-primary-dark border-primary-dark border-2;
-  font-family: 'Baustrasse Bold';
-  font-size: 16px;
-  background: yellow;
-  width: auto;
-  display: inline-block;
-  letter-spacing: .5px;
-  transition: all .1s linear;
+  @apply font-mono;
 }
 
-a.cta:hover{
-  font-family: 'Baustrasse Bold Oblique';
-  @apply bg-primary-dark;
-  color: yellow;
-  border-color: yellow;
+/* a.cta{
+  @apply px-2 py-1 rounded font-mono;
+  color: lightgreen;
+  font-size: 16px;
+  background: rgba(0,0,0,0.9);
+  transition: all .2s linear;
+  border: 1px solid rgba(255,255,255,0.2);
+} */
+
+/* a.cta:hover{
+  @apply text-primary-dark;
+  border-bottom: 0;
+  background: lightgreen;
+} */
+
+
+.year{
+  @apply font-mono text-sm px-1;
+  vertical-align: middle;
+  display: inline-block;
+  background: black;
+  border: 1px solid rgba(255,255,255, 0.2);
+  border-radius: 3px;
+}
+
+p.subhead{
+  @apply opacity-70 text-sm;
 }
 
 /* a.cta svg{
@@ -113,20 +129,21 @@ a.cta:hover{
 } */
 
 p{
-    @apply text-base mb-4 mt-0 font-light;
+    @apply mb-4 mt-0;
     /* letter-spacing: -0.01em; */
     & a{
+        @apply opacity-90;
         text-decoration: none;
         position: relative;
-        color: yellow;
+        color: lightgreen;
     }
     & a:hover{
-        border-bottom: 1px solid yellow;
+        border-bottom: 1px solid lightgreen;
     }
 }
 
 *::selection{
-  background: yellow;
+  background: lightgreen;
   @apply text-primary-dark;
 }
 
@@ -182,11 +199,20 @@ ol{
 }
 
 blockquote{
-  @apply font-medium block pl-4 mb-6 italic;
+  @apply block px-6 py-4 italic;
+  margin-bottom: 1.5rem;
   line-height: 1.68;
-  border-left-color: yellow;
-  border-left-width: 3px;
-  border-left-style: solid;
+  border: 1px dotted lightgreen;
+  border-radius: 16px;
+  background: rgba(0,0,0, 0.1);
+}
+
+blockquote p{
+  font-variation-settings: 'wght' 400;
+}
+
+blockquote cite{
+  @apply opacity-70;
 }
 
 /* button{
@@ -209,9 +235,21 @@ body{
 }
 
 .home-intro{
-  @apply max-w-2xl mx-auto px-8 pt-8 pb-16 mb-0;
+  @apply max-w-3xl mx-auto px-4 pt-8 mb-0 md:flex;
   z-index: 10;
   position: relative;
+}
+
+.home-intro .tagline{
+  @apply md:w-3/5 w-full md:pr-16;
+}
+
+.home-intro .tagline h2{
+  @apply font-mono;
+}
+
+.home-intro .quote{
+  @apply md:w-2/5 w-full;
 }
 
 .home-intro .background-image{
@@ -289,27 +327,35 @@ main.resume{
 }
 
 .resume h2{
-  @apply font-normal inline-block;
+  @apply font-normal inline-block text-2xl;
 }
 
 .resume h3{
   @apply mt-0 mb-2 font-semibold;
 }
 
-section, nav{
-  @apply px-4;
+.resume p.subhead{
+  @apply font-normal text-lg opacity-100;
+}
+
+.resume p, .resume ul{
+  @apply opacity-70;
+}
+
+nav{
+  /* @apply px-4; */
 }
 
 .resume section, .resume .entry{
   @apply mb-12 max-w-2xl;
 }
 
-main.projects{
+/* main.projects{
   @apply pb-64;
-}
+} */
 
 section.testimonial{
-  background: yellow;
+  background: lightgreen;
   @apply text-primary-dark py-16;
 }
 
@@ -331,11 +377,11 @@ section.testimonial blockquote cite{
 }
 
 section.projects{
-  @apply py-20 w-full mx-auto;
+  @apply w-full mx-auto;
 }
 
 section.project{
-  @apply w-full max-w-5xl mx-auto pt-16;
+  @apply w-full max-w-3xl mx-auto mt-8;
 }
 
 section.project .image{
@@ -346,13 +392,13 @@ section.project .copy-container{
   @apply w-full max-w-3xl mx-auto;
 }
 
-section.projects#case-studies{
+/* section.projects#case-studies{
   background: #150016;
 }
 
 section.projects#side-projects{
   background: #000000;
-}
+} */
 
 section.poster{
   @apply text-center py-3;
@@ -364,19 +410,23 @@ section.poster>img{
 }
 
 .project-container{
-  @apply flex max-w-6xl w-full mx-auto my-24;
+  @apply flex max-w-3xl w-full mx-auto px-4 my-12;
   flex-wrap: wrap;
   justify-content: center;
   gap: 32px;
 }
 
 .project-entry{
-  @apply mb-8;
+  @apply mb-8 w-full;
 }
 
 .project-entry .image{
   @apply my-0 rounded-md;
   overflow: hidden;
+}
+
+.project-entry#demographics-reporting .image{
+  @apply max-w-xl;
 }
 
 .project-entry#demographics-reporting .image, .project-entry#data-explorer .image{
@@ -399,17 +449,17 @@ section.poster>img{
 }
 
 .project-entry h3{
-  @apply mt-0 mb-2;
+  @apply mt-0 mb-1 opacity-90;
 }
 
 .project .summary-stat{
-  @apply px-3 py-2 inline-block mb-2;
-  background: yellow;
+  @apply pl-3 py-2 inline-block mb-4;
+  border-left: 1px solid lightgreen;
 }
 
-.resume .subhead{
+/* .resume .subhead{
   @apply italic mb-2;
-}
+} */
 
 .stripe{
   @apply flex items-start max-w-3xl mx-auto;
@@ -448,7 +498,7 @@ section.poster>img{
 }
 
 figcaption{
-  @apply text-sm font-bold text-primary-light opacity-80;
+  @apply text-sm text-primary-light opacity-70;
 }
 
 [data-colorway="reverse"]{
@@ -458,22 +508,15 @@ figcaption{
 }
 
 .project-intro{
-  @apply max-w-3xl mx-auto mb-12;
+  @apply max-w-3xl mx-auto;
 }
 
 .story-type{
-  @apply text-primary-light font-display opacity-70;
+  @apply text-primary-light opacity-70;
 }
 
 .tags{
   @apply flex; 
-}
-
-.tags .tag, .summary-stat{
-  @apply text-primary-dark;
-  border-radius: 12px 4px 12px 4px;
-  @apply px-3 py-1 text-sm mr-2;
-  background: #21D4FD;
 }
 
 .summary-stat strong{
@@ -504,8 +547,7 @@ h2 + .tags{
 footer{
   /* position: absolute;
   bottom: 0px; */
-  width: 100%;
-  @apply py-2 text-primary-light;
+  @apply px-4 py-4 text-primary-light max-w-3xl w-full mx-auto;
 }
 
 .marquee {
@@ -518,7 +560,7 @@ footer{
 
 .marquee-content-1{
   @apply text-2xl uppercase;
-  color: yellow;
+  color: lightgreen;
   font-family: 'Baustrasse Bold';
   display: flex;
   animation: marquee1 20s linear infinite;
@@ -526,7 +568,7 @@ footer{
 }
 
 .marquee-content-1 .icon, .marquee-content-2 .icon{
-  fill: yellow;
+  fill: lightgreen;
   width: 24px;
   height: 24px;
   @apply mx-12;
@@ -534,7 +576,7 @@ footer{
 
 .marquee-content-2{
   @apply text-2xl;
-  color: yellow;
+  color: lightgreen;
   font-family: 'Baustrasse Bold Oblique';
   display: flex;
   animation: marquee2 25s linear infinite;
@@ -628,12 +670,12 @@ nav .header-links .nav-item, nav>a, button{
 }
 
 button{
-  color: yellow;
+  color: lightgreen;
 }
 
 nav .header-links .nav-item:hover, nav>a:hover, button:hover{
-  color: yellow;
-  border-bottom: 1px solid yellow;
+  color: lightgreen;
+  border-bottom: 1px solid lightgreen;
 }
 
 /* nav .header-links .nav-item:first-child{
