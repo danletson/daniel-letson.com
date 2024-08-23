@@ -338,6 +338,10 @@ main.resume{
   @apply font-normal text-lg opacity-100;
 }
 
+.resume #contact p{
+  @apply opacity-100;
+}
+
 .resume p, .resume ul{
   @apply opacity-70;
 }

@@ -1052,6 +1052,10 @@ main.resume {
   opacity: 1;
 }
 
+.resume #contact p {
+  opacity: 1;
+}
+
 .resume p, .resume ul {
   opacity: 0.7;
 }
