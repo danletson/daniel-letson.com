@@ -315,7 +315,7 @@ main.home{
 }
 
 main.resume{
-  @apply pb-32 max-w-3xl mx-auto;
+  @apply pb-32 px-4 max-w-3xl mx-auto;
 }
 
 .resume header{
