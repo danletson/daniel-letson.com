@@ -135,7 +135,7 @@ code,
 kbd,
 samp,
 pre {
-  font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  font-family: JetBrains Mono, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
   /* 1 */
   font-feature-settings: normal;
   /* 2 */
@@ -723,7 +723,9 @@ a {
 }
 
 a.cta {
-  font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  font-family: JetBrains Mono, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  font-variation-settings: 'wght' 300;
+  font-weight: 300;
 }
 
 /* a.cta{
@@ -744,9 +746,11 @@ a.cta {
 .year {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
-  font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  font-family: JetBrains Mono, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
   font-size: 0.875rem;
   line-height: 1.25rem;
+  font-weight: 300;
+  font-variation-settings: 'wght' 300;
   vertical-align: middle;
   display: inline-block;
   background: black;
@@ -935,7 +939,9 @@ body {
 }
 
 .home-intro .tagline h2 {
-  font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  font-family: JetBrains Mono, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  font-variation-settings: 'wght' 200;
+  font-weight: 200;
 }
 
 .home-intro .quote {

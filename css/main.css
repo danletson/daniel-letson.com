@@ -92,6 +92,8 @@ a{
 
 a.cta{
   @apply font-mono;
+  font-variation-settings: 'wght' 300;
+  font-weight: 300;
 }
 
 /* a.cta{
@@ -112,6 +114,8 @@ a.cta{
 
 .year{
   @apply font-mono text-sm px-1;
+  font-weight: 300;
+  font-variation-settings: 'wght' 300;
   vertical-align: middle;
   display: inline-block;
   background: black;
@@ -246,6 +250,8 @@ body{
 
 .home-intro .tagline h2{
   @apply font-mono;
+  font-variation-settings: 'wght' 200;
+  font-weight: 200;
 }
 
 .home-intro .quote{

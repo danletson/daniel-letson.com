@@ -40,6 +40,7 @@ module.exports = {
         'serif',
       ],
       'mono': [
+        'JetBrains Mono',
         'Menlo',
         'Monaco',
         'Consolas',
