@@ -951,7 +951,7 @@ body {
 .home-intro {
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
   max-width: 48rem;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -979,12 +979,6 @@ body {
 .home-intro .quote {
   width: 100%;
   max-width: 32rem;
-}
-
-@media (min-width: 768px) {
-  .home-intro .quote {
-    width: 50%;
-  }
 }
 
 .home-intro .background-image{
@@ -1060,14 +1054,13 @@ header {
   cursor: pointer;
 }
 
-.chartTitle{
-  position: relative;
-}
-
 .chartTitle, .milestoneText {
   font-family: JetBrains Mono, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
   font-size: 0.75rem;
   line-height: 1rem;
+  position: absolute;
+  top: 24px;
+  left: 36px;
   background: #160c1d;
   padding: 4px 8px;
   color: white;
@@ -1075,13 +1068,7 @@ header {
 }
 
 .milestoneText {
-  font-family: JetBrains Mono, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
-  font-size: 0.75rem;
-  line-height: 1rem;
   opacity: 0;
-  position: absolute;
-  top: 24px;
-  left: 36px;
   pointer-events: none;
   color: white;
   max-width: 400px;
