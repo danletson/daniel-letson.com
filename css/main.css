@@ -8,25 +8,12 @@ html{
     
 @screen md{
     html{
-        font-size: 16px;
+        font-size: 18px;
     }
 }
     
 
 /* Typography */
-
-@font-face {
-  font-family: 'Baustrasse Bold';
-  font-display: swap;
-  src: url('../../fonts/BaustrasseBold.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Baustrasse Bold Oblique';
-  font-display: swap;
-  src: url('../../fonts/BaustrasseBoldOblique.woff2') format('woff2');
-}
-
 
 body{
 @apply font-text text-primary-light font-light pt-8 bg-primary-dark;
@@ -38,13 +25,6 @@ body{
         @apply text-white;
         text-shadow: none;
     }
-}
-
-h1{
-  /* font-family: 'Baustrasse Bold Oblique'; */
-  @apply text-4xl;
-  line-height: 1;
-  @apply relative text-white mb-2;
 }
 
 h1 .sticker{
@@ -72,15 +52,15 @@ h1,h2,h3,h4,p{
 @apply mx-auto;
 }
 
-/* h1{
-    @apply text-3xl font-medium;
-} */
+h1{
+    @apply text-4xl font-medium mb-4;
+}
 h2{
-    @apply text-xl mb-8;
+    @apply text-3xl mb-8;
     font-variation-settings: 'wght' 400;
 }
 h3{ 
-    @apply text-xl mt-12;
+    @apply text-2xl mt-12;
     font-variation-settings: 'wght' 500;
 }
 
@@ -124,7 +104,7 @@ a.cta{
 }
 
 p.subhead{
-  @apply opacity-70 text-sm;
+  @apply opacity-70;
 }
 
 /* a.cta svg{
@@ -203,8 +183,7 @@ ol{
 }
 
 blockquote{
-  @apply block px-6 py-4 italic;
-  margin-bottom: 1.5rem;
+  @apply block px-6 py-4 my-16 italic;
   line-height: 1.4;
   border: 1px dotted lightgreen;
   border-radius: 16px;
@@ -239,7 +218,7 @@ body{
 }
 
 .home-intro{
-  @apply max-w-3xl mx-auto px-4 pt-8 mb-24;
+  @apply max-w-5xl mx-auto py-32 px-4 mb-24;
   z-index: 10;
   position: relative;
 }
@@ -248,10 +227,37 @@ body{
   @apply w-full;
 }
 
+.home-intro .tagline h1{
+  @apply text-5xl mb-12;
+}
+
 .home-intro .tagline h2{
-  @apply font-mono;
-  font-variation-settings: 'wght' 200;
-  font-weight: 200;
+  @apply text-3xl leading-snug;
+  font-weight: 300;
+  font-variation-settings: 'wght' 300;
+}
+
+.home-intro .tagline h2 a{
+  @apply text-primary-accent;
+  font-weight: 500;
+  font-variation-settings: 'wght' 500;
+}
+
+.home-intro a.cta{
+  @apply inline-block px-3 py-2;
+  background: rgba(0,0,0,0.6);
+  border: 1px solid rgba(255,255,255, 0.2);
+  border-radius: 3px;
+  transition: all .2s ease-out;
+}
+
+.home-intro a.cta:hover{
+  @apply text-primary-dark;
+  background: lightgreen;
+}
+
+.home-intro a.cta:first-child{
+  @apply mr-4;
 }
 
 .home-intro .flex-container{
@@ -273,7 +279,7 @@ body{
 }
 
 header{
-  @apply max-w-3xl w-full mx-auto;
+  @apply max-w-5xl w-full mx-auto;
 }
 
 @keyframes fadeInUp {
@@ -412,9 +418,9 @@ nav{
   @apply mb-12 max-w-2xl;
 }
 
-/* main.projects{
-  @apply pb-64;
-} */
+main.projects, header{
+  @apply px-4;
+}
 
 section.testimonial{
   background: lightgreen;
@@ -443,7 +449,7 @@ section.projects{
 }
 
 section.project{
-  @apply w-full max-w-3xl mx-auto mt-8;
+  @apply w-full max-w-5xl mx-auto mt-8;
 }
 
 section.project .image{
@@ -472,14 +478,11 @@ section.poster>img{
 }
 
 .project-container{
-  @apply flex max-w-3xl w-full mx-auto px-4 my-12;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 32px;
+  @apply max-w-5xl w-full mx-auto px-4 my-12;
 }
 
 .project-entry{
-  @apply mb-8 w-full;
+  @apply mb-32 w-full;
 }
 
 .project-entry .image{
@@ -488,7 +491,11 @@ section.poster>img{
 }
 
 .project-entry#demographics-reporting .image{
-  @apply max-w-xl;
+  @apply max-w-4xl mx-auto;
+  overflow-y: hidden;
+  position:relative;
+  height: 0;
+  padding-bottom: 60%;
 }
 
 .project-entry#demographics-reporting .image, .project-entry#data-explorer .image{
@@ -499,7 +506,7 @@ section.poster>img{
 
 #demographics-reporting .image video{
   /* position: relative;
-  top: -84px; */
+  top: -30%; */
 }
 
 .project-entry .image img{
@@ -507,7 +514,7 @@ section.poster>img{
 }
 
 .project-entry .description{
-  @apply py-4;
+  @apply py-4 mx-auto w-full max-w-2xl;
 }
 
 .project-entry h3{
@@ -518,6 +525,33 @@ section.poster>img{
   @apply pl-3 py-2 inline-block mb-4;
   border-left: 1px solid lightgreen;
 }
+
+.project .project-overview-container{
+  @apply px-4 py-4 rounded-md md:flex mb-24;
+  gap: 16px;
+  justify-content: space-between;
+  background: rgba(0,0,0, 0.3);
+}
+
+.project .project-overview-container .overview-facet{
+  @apply w-full mb-6 md:mb-0;
+  flex-basis: 100%;
+}
+
+.project .project-overview-container .overview-facet:last-child{
+  @apply mb-0;
+}
+
+.project .project-overview-container .overview-facet .facet-label{
+  @apply opacity-70 text-sm mb-1;
+  color: lightgreen;
+}
+
+.project .project-overview-container .overview-facet .facet-value{
+  @apply font-mono text-sm;
+}
+
+
 
 /* .resume .subhead{
   @apply italic mb-2;
@@ -560,7 +594,11 @@ section.poster>img{
 }
 
 figcaption{
-  @apply text-sm text-primary-light opacity-70;
+  @apply text-sm font-mono text-center text-primary-light opacity-70;
+}
+
+#data-explorer figcaption, #onboarding-experience figcaption{
+  @apply mt-8;
 }
 
 [data-colorway="reverse"]{
@@ -609,7 +647,8 @@ h2 + .tags{
 footer{
   /* position: absolute;
   bottom: 0px; */
-  @apply px-4 py-4 text-primary-light max-w-3xl w-full mx-auto;
+  @apply px-4 py-4 text-primary-light text-xs font-mono max-w-5xl text-center w-full mx-auto opacity-70 pb-16;
+  color: lightgreen;
 }
 
 .marquee {

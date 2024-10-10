@@ -6,7 +6,7 @@ module.exports = {
         'transparent': 'transparent',
         'primary-light': '#FEEBFF',
         'primary-dark': '#160c1d',
-        'primary-accent': 'turquoise',
+        'primary-accent': 'lightgreen',
         'secondary-dark': '#4E6B8F',
         'white': '#ffffff'
       }

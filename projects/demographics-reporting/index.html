@@ -57,20 +57,61 @@
     <section class="project" id="demographics-reporting">
       <div class="copy-container">
         <span class="story-type">Case Study</span>
-        <h2>Demographics Reporting</h2>
+        <h1>Nonprofit Demographics Reporting</h1>
+        <h2>Unlocking insights to empower equitable giving</h2>
+      </div>
+      <div class="image">
+        <figure>
+          <picture>
+            <img src="../../img/demographics-reporting-component-intro-image.png" alt="">
+          </picture>
+        </figure>
+      </div>
+      <div class="project-overview-container">
+        <div class="overview-facet">
+          <div class="facet-label">
+            Product
+          </div>
+          <div class="facet-value">
+            Fluxx/Candid Integration</div>
+        </div>
+        <div class="overview-facet">
+          <div class="facet-label">
+            Success Metrics
+          </div>
+          <div class="facet-value">
+            Adoption
+          </div>
+        </div>
+        <div class="overview-facet">
+          <div class="facet-label">
+            Role
+          </div>
+          <div class="facet-value">
+            Senior Product Designer
+          </div>
+        </div>
+      </div>
+      <div class="copy-container">
+        <h3>Overview</h3>
         <p><a href="https://fluxx.io" target="blank">Fluxx</a> is an industry-leading cloud platform for grants
           management, used by dozens of the world’s most well-known foundations and charitable nonprofits. As lead
-          product
-          designer, I designed a new component to help funders analyze the demographic makeup of grantee organizations
-          in
-          order to hit institutional goals.</p>
-        <p class="summary-stat"><strong>Problem: </strong>Granting foundations need a way to integrate demographic data
-          into their decision-making process in choosing grantee organizations</p>
-        <p class="summary-stat"><strong>Goal: </strong>An easy-to-scan interface that presents demographic info in an
-          unbiased way</p>
-        <p class="summary-stat"><strong>Team: </strong>Myself and 1 other designer, 1 product manager, 1 engineer</p>
-        <br>
-        <p class="summary-stat"><strong>Timeline: </strong>3 months</p>
+          product designer, I designed a new component to help funders analyze the demographic makeup of grantee
+          organizations
+          in order to hit institutional goals.</p>
+
+        <h3>Problems</h3>
+        <ul>
+          <li>Grant-making organizations struggle to collect demographic information from their grantees</li>
+          <li>Analysis of demographic information happens outside normal review workflows, and often requires technical
+            knowledge</li>
+        </ul>
+        <h3>Goals</h3>
+        <ul>
+          <li>Integrate third-party data into Fluxx workflows, with an external source of truth (Candid)</li>
+          <li>Provide actionable insights for users of all skill levels</li>
+          <li>Maintain accessibility standards (WCAG 2.2 AA)</li>
+        </ul>
 
         <h3>Background</h3>
         <p>
@@ -80,7 +121,19 @@
           delivered by Candid is fairly fixed, but determining how it should be "reported" to grant-makers was an
           opportunity to differentiate.
         </p>
-
+      </div>
+      <div class="image">
+        <figure>
+          <picture>
+            <img src="../../img/candid-demographics-default-visualization.png"
+              alt="Candid demographics default visualization" style="max-width:48rem;margin:0 auto 3rem auto;">
+          </picture>
+          <figcaption>
+            An example nonprofit demographic profile as presented on Candid.org
+          </figcaption>
+        </figure>
+      </div>
+      <div class="copy-container">
         <h3>Process</h3>
         <p>
           From the beginning of the project, it was obvious that charts would be a natural fit for making data
@@ -90,19 +143,6 @@
           ethnicity, sexual orientation, etc) and a non-negotiable minimum of WCAG 2.2 AA compliance made this specific
           use case especially challenging.
         </p>
-      </div>
-      <div class="image">
-        <figure>
-          <picture>
-            <img src="../../img/candid-demographics-default-visualization.png"
-              alt="Candid demographics default visualization">
-          </picture>
-          <figcaption>
-            An example nonprofit demographic profile as presented on Candid.org
-          </figcaption>
-        </figure>
-      </div>
-      <div class="copy-container">
         <p>
           Much of the data delivered by Candid is simply counts of employees at a specific nonprofit by demographic
           category, like <strong>Race & Ethnicity, Gender Identity, Disability Status</strong> etc. Visualizing this
@@ -135,64 +175,16 @@
           <li>Differentiable to users with various color-blindness conditions</li>
         </ul>
       </div>
-      <div class="glide glide-1">
-        <div class="glide__track" data-glide-el="track">
-          <ul class="glide__slides">
-            <li class="glide__slide">
-              <figure>
-                <picture>
-                  <img src="../../img/demographics-visualization-colors-1.png" alt="Fluxx UI color palette">
-                </picture>
-              </figure>
-            </li>
-            <li class="glide__slide">
-              <figure>
-                <picture>
-                  <img src="../../img/demographics-visualization-colors-2.png"
-                    alt="Fluxx UI color palette with duplicate colors removed">
-                </picture>
-              </figure>
-            </li>
-            <li class="glide__slide">
-              <figure>
-                <picture>
-                  <img src="../../img/demographics-visualization-colors-3.png"
-                    alt="Fluxx UI color palette with non-accessible colors removed">
-                </picture>
-              </figure>
-            </li>
-            <li class="glide__slide">
-              <figure>
-                <picture>
-                  <img src="../../img/demographics-visualization-colors-4.png" alt="Final acceptable color palette">
-                </picture>
-              </figure>
-            </li>
-            <li class="glide__slide">
-              <figure>
-                <picture>
-                  <img src="../../img/demographics-visualization-palette-colorblindness.png"
-                    alt="Color palette filtered for various color-blindness conditions">
-                </picture>
-              </figure>
-            </li>
-          </ul>
-          <div class="glide__footer">
-            <div class="glide__caption">
-              <figcaption>
-                Identifying a useable color palette by process of elimination
-              </figcaption>
-            </div>
-            <div class="glide__navigation">
-              <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
-                Prev
-              </button>
-              <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
-                Next
-              </button>
-            </div>
-          </div>
-        </div>
+      <div class="image">
+        <figure>
+          <picture>
+            <img src="../../img/demographics-visualization-palette-colorblindness.png"
+              alt="Color palette filtered for various color-blindness conditions">
+          </picture>
+          <figcaption>
+            Final visualization color palette filtered for various color-blindness conditions
+          </figcaption>
+        </figure>
       </div>
       <div class="copy-container">
         <h3>
@@ -206,51 +198,19 @@
           easy to determine the biggest segment in each category in cases where the stacked bars might be ambiguous.
         </p>
       </div>
-      <div class="glide glide-2">
-        <div class="glide__track" data-glide-el="track">
-          <ul class="glide__slides">
-            <li class="glide__slide">
-              <div class="video-wrapper" style="padding-bottom:95%;">
-                <video poster="../../img/demographics-reporting-component-cover.png" controls="controls" tabindex="0"
-                  autoplay="autoplay" loop="loop">
-                  <source src="../../img/demographics-reporting-component-demo.mp4" type="video/mp4">
-                  Video tag not supported. Download the video
-                  <a href="../../img/demographics-reporting-component-demo.mp4">here</a>.
-                </video>
-              </div>
-            </li>
-            <li class="glide__slide">
-              <figure>
-                <picture>
-                  <img src="../../img/demographics-visualization-1.png" alt="Final visualization">
-                </picture>
-              </figure>
-            </li>
-            <li class="glide__slide">
-              <figure>
-                <picture>
-                  <img src="../../img/demographics-visualization-2.png"
-                    alt="Final visualization with individual data point hovered">
-                </picture>
-              </figure>
-            </li>
-          </ul>
-          <div class="glide__footer">
-            <div class="glide__caption">
-              <figcaption>
-                The final visualization with embedded tabular data
-              </figcaption>
+      <div class="image">
+        <figure>
+          <picture>
+            <div class="video-wrapper" style="padding-bottom:95%;">
+              <video poster="../../img/demographics-reporting-component-cover.png" controls="controls" tabindex="0"
+                autoplay="autoplay" loop="loop">
+                <source src="../../img/demographics-reporting-component-demo.mp4" type="video/mp4">
+                Video tag not supported. Download the video
+                <a href="../../img/demographics-reporting-component-demo.mp4">here</a>.
+              </video>
             </div>
-            <div class="glide__navigation">
-              <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
-                Prev
-              </button>
-              <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
-                Next
-              </button>
-            </div>
-          </div>
-        </div>
+          </picture>
+        </figure>
       </div>
       <div class="copy-container">
         <p>This version is now live inside Fluxx's Grantmaker platform, used by hundreds of nonprofits on a daily basis.
@@ -270,45 +230,6 @@
     <div>Designed and built by Daniel Letson in Oakland, California. Contents copyright️ 2024.
     </div>
   </footer>
-  <script>
-    const slider1 = new Glide(".glide-1", {
-      type: "slider",
-      startAt: 0,
-      perView: 1,
-      gap: 0,
-      peek: {
-        before: 0,
-        after: 60
-      }
-    }).mount();
-
-    document.querySelector(".glide-1 .glide__arrow--right").addEventListener("click", () => {
-      slider1.go(">");
-    });
-
-    document.querySelector(".glide-1 .glide__arrow--left").addEventListener("click", () => {
-      slider1.go("<");
-    });
-
-    const slider2 = new Glide(".glide-2", {
-      type: "slider",
-      startAt: 0,
-      perView: 1,
-      gap: 0
-    }).mount();
-
-    document.querySelector(".glide-2 .glide__arrow--right").addEventListener("click", () => {
-      slider2.go(">");
-    });
-
-    document.querySelector(".glide-2 .glide__arrow--left").addEventListener("click", () => {
-      slider2.go("<");
-    });
-
-  </script>
-  <script>
-    document.getElementById("year").innerHTML = new Date().getFullYear();
-  </script>
 </body>
 
 </html>
