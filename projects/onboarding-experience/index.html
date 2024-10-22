@@ -98,19 +98,23 @@
         <h3>Overview</h3>
         <p style="margin-bottom:24px;"><a href="https://grantseeker.io" target="blank">Grantseeker</a> is a SaaS
           productivity tool for nonprofits, which helps them track the grants they've received, communicate with
-          funders,
-          and search for new funding opportunities. As a product designer on the Grantseeker team, I helped to design a
-          new onboarding flow that would get new users working with real data in less than a minute.</p>
-
+          funders, and search for new funding opportunities. As a product designer on the Grantseeker team, I helped to
+          design a new onboarding flow that would get new users working with real data in less than a minute.
+        </p>
         <h3>Problems</h3>
         <ul>
-          <li>New signups struggled to quickly comprehend the value of the Grantseeker platform</li>
-          <li>Effectively using the platform requires significant user-managed configuration up front</li>
+          <li>New signups struggled to quickly comprehend the value of the Grantseeker platform
+          </li>
+          <li>Few users completed existing onboarding</li>
         </ul>
+      </div>
+      <div class="copy-container">
+
         <h3>Goals</h3>
         <ul>
+          <li>Delight new signups with a helpful walkthrough</li>
+          <li>Help users get “real data” into the system with minimal friction</li>
           <li>Turn casual signups into paying customers in less than 14 days</li>
-          <li>Delight new free-tier signups with a helpful walkthrough</li>
         </ul>
       </div>
       <div class="image">
@@ -130,44 +134,16 @@
           onboarding flow.</p>
 
         <h3>Process</h3>
-        <p>Our initial research started with identifying the "real" data that grantees cared about most in their offline
-          work, and innovating ways to get it precisely modeled in the app as quickly as possible.</p>
-        <p>My design partner and I collaborated with our engineers to identify the types of record creation that
-          correlated most highly with regular visits, and began to sketch friendly ways to nudge new users towards
-          getting
-          these records set up.</p>
-
-        <p>Initial versions shepherded new users through value propositions and explained the types of work they'd be
-          doing, along with a homepage checklist.</p>
-      </div>
-      <div class="image">
-        <figure>
-          <picture>
-            <img src="../../img/onboarding-initial-mock-1.png" alt="Initial onboarding walkthrough modal">
-          </picture>
-          <figcaption>
-            Initial onboarding walkthrough
-          </figcaption>
-        </figure>
-      </div>
-
-      <div class="image">
-        <figure>
-          <picture>
-            <img src="../../img/onboarding-initial-mock-2.png" alt="Initial onboarding homepage checklist">
-          </picture>
-          <figcaption>
-            Initial onboarding homepage checklist
-          </figcaption>
-        </figure>
-      </div>
-      <div class="copy-container">
-        <p>Unfortunately, usage analytics revealed that users rarely engaged with these walkthrough steps, and most new
-          signups were not successfully creating "real" data on their first visit. We'd need to cut the effort required
-          even further to acheive the stickiness we were hoping for.</p>
-        <p>
-          After consultation with marketing and engineering, the value proposition flow was cut in favor of an optional
-          video, and the checklist of "must-do" actions was cut from 5 steps to 3.</p>
+        <p>The existing onboarding flow for free beta signups consisted of several static slides with value propositions
+          about functionality, with no contextual help once users landed inside the app. Only about 35% of new signups
+          got through the onboarding slides, and even fewer went on to create meaningful usage in the app afterwards.
+        </p>
+        <p>In order to overhaul the onboarding experience, my research started with identifying the "real" data that
+          grantees cared about most, and innovating ways to get it precisely modeled in the app as quickly as possible.
+        </p>
+        <p>I collaborated with Grantseeker’s engineers to identify the types of record creation that correlated most
+          highly with regular visits, and began to sketch friendly ways to nudge new users towards getting these records
+          set up.</p>
       </div>
       <div class="image">
         <figure style="margin-bottom: 24px;">
@@ -188,11 +164,9 @@
       <div class="copy-container">
         <p>
           Our biggest innovation in getting users onboarded quickly came from leveraging public data. Utilizing
-          government
-          public-records APIs, we were able to architect a flow that would get a user up and running with their first
-          "real" data in <strong>less than a minute</strong>, borrowing from quick-start social media patterns like
-          "find
-          your friends" or "who to follow".
+          government public-records APIs, we were able to architect a flow that would get a user up and running with
+          their first "real" data in less than a minute, borrowing from quick-start social media patterns like "find
+          your friends" or "who to follow". It worked like this:
         </p>
         <ol>
           <li>A user provides the name of their organization at signup</li>
@@ -202,7 +176,11 @@
           <li>The user creates records for all of their funders in a single click</li>
         </ol>
       </div>
-
+      <div class="copy-container">
+        <h3>Solution</h3>
+        <p>The new user signup flow was cut from 5 informational “slides” to 2 simple interactive steps: An optional
+          intro video, and an API-powered search to confirm their organization details. </p>
+      </div>
       <div class="image">
         <figure>
           <picture>
@@ -214,9 +192,26 @@
         </figure>
       </div>
       <div class="copy-container">
-        <p>To shepherd new users through the flow, I designed a new icon library, extending our UI icons with brand
-          colors
-          and transparency effects. Playful, legible, and on-brand.</p>
+        <p>
+          Once users land on the app’s dashboard, a simple 3-step checklist tracks their progress through initial setup.
+          To shepherd new users through the flow, I designed a new icon library, extending our UI icons with brand
+          colors and transparency effects. Friendly, legible, and on-brand.</p>
+      </div>
+      <div class="image">
+        <figure>
+          <picture>
+            <img src="../../img/onboarding-experience-1.png" alt="Homepage showing onboarding checklist">
+          </picture>
+          <figcaption>
+            Grantseeker "blank slate" homepage with onboarding checklist
+          </figcaption>
+        </figure>
+      </div>
+      <div class="copy-container">
+        <p>
+          Once users land on the app’s dashboard, a simple 3-step checklist tracks their progress through initial setup.
+          To shepherd new users through the flow, I designed a new icon library, extending our UI icons with brand
+          colors and transparency effects. Friendly, legible, and on-brand.</p>
       </div>
       <div class="image">
         <figure>
@@ -232,6 +227,18 @@
         <p>After initial onboarding, users are fed a drip campaign of super-lightweight "tips", to nudge them into
           socializing the app with their coworkers and further integrate Grantseeker's tools with their day-to-day work.
         </p>
+      </div>
+      <div class="image">
+        <figure>
+          <picture>
+            <img style="margin:0 auto;" src="../../img/onboarding-experience-tips-1.png" alt="Onboarding tips example">
+          </picture>
+          <figcaption>
+            Onboarding tips example
+          </figcaption>
+        </figure>
+      </div>
+      <div class="copy-container">
         <h3>Solution</h3>
         <p>
           The redesigned onboarding resulted in:
