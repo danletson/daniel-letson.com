@@ -73,17 +73,6 @@
           </div>
           <div class="facet-value">
             Fluxx Grantmaker</div>
-        </div>
-        <div class="overview-facet">
-          <div class="facet-label">
-            Success Metrics
-          </div>
-          <div class="facet-value">
-            Adoption<br>
-            Support request volume
-          </div>
-        </div>
-        <div class="overview-facet">
           <div class="facet-label">
             Role
           </div>
@@ -91,14 +80,24 @@
             Senior Product Designer
           </div>
         </div>
+        <div class="overview-facet overview-facet--impact">
+          <div class="facet-label">
+            Success Metrics
+          </div>
+          <div class="facet-value">
+            <ul>
+              <li>Reduction in support request volume</li>
+              <li>Increased adoption of in-app tools</li>
+            </ul>
+          </div>
+        </div>
       </div>
       <div class="copy-container">
         <h3>Overview</h3>
         <p><a href="https://fluxx.io" target="blank">Fluxx</a> is an industry-leading cloud platform for grants
           management, used by dozens of the world’s most well-known foundations and charitable nonprofits. As lead
-          product designer, I designed a new component to help funders analyze the demographic makeup of grantee
-          organizations
-          in order to hit institutional goals.</p>
+          product designer, I research, designed, and prototyped new workflows to help non-technical users create
+          reports and understand their data.</p>
 
         <h3>Problems</h3>
         <ul>
@@ -107,6 +106,19 @@
           <li>Semantically similar fields and data entropy over time lead to confusion</li>
           <li>Existing data export tools don't match users mental models of their day-to-day work</li>
         </ul>
+      </div>
+      <div class="image">
+        <figure>
+          <picture>
+            <img src="../../img/grantmaker-chart-and-table-cards-with-selector.png"
+              alt="A Fluxx dashboard showing chart and table cards">
+          </picture>
+          <figcaption>
+            BEFORE: A Fluxx dashboard showing chart and table cards
+          </figcaption>
+        </figure>
+      </div>
+      <div class="copy-container">
         <h3>Goals</h3>
         <ul>
           <li>Reduce friction in report creation</li>
@@ -116,33 +128,20 @@
 
         <h3>Background</h3>
 
-        <p>The primary unit of Grantmaker’s UI is a “card”, a filtered list of records. Most daily users build up
-          dashboards of cards, laid out in a specific order to support their approval workflows. These cards can be
-          simple
-          list views, tables, summary statistics, or data visualizations.</p>
+        <p>The primary unit of Grantmaker’s UI is a “card”, or a filtered list of records. Most daily users build up
+          dashboards of cards, laid out in a specific order to support their approval workflows. </p>
         <p>The data that underlies these card dashboards is extremely specific and complex, and many users have a hard
-          time analyzing the data that makes up their day-to-day-work. Advanced users have access to robust reporting
+          time analyzing the data that makes up their day-to-day-work. Admin users have access to robust reporting
           tools, but when most staff need answers to questions like “How much total giving has my program done so far
           this
           year?”, many were lost and frustrated.</p>
-      </div>
-      <div class="image">
-        <figure>
-          <picture>
-            <img src="../../img/grantmaker-chart-and-table-cards-with-selector.png"
-              alt="A Fluxx dashboard showing chart and table cards">
-          </picture>
-          <figcaption>
-            A Fluxx dashboard showing chart and table cards
-          </figcaption>
-        </figure>
       </div>
       <div class="copy-container">
 
         <h3>Process</h3>
         <p>To understand the issues Fluxx users were having in finding and leveraging their data, the team set up a
           series
-          of interview-style research sessions with volunteer users. My design partner and I conducted 7, 45-minute
+          of interview-style research sessions with volunteer users. My design partner and I conducted seven 45-minute
           interactive sessions via Zoom. We encouraged our interviewees to narrate their thought process and pain points
           as they navigated a report-creation workflow. We took turns leading the sessions and taking detailed notes.
         </p>
@@ -190,7 +189,7 @@
         </figure>
       </div>
       <div class="copy-container">
-        <p>"Ease of use" emerged as the most popular pain point theme from our user research, so I started sketching on
+        <p>"Ease of use" emerged as the most popular pain point theme from our user research, so I started sketching
           ways to help users find the data they want, and generate reports seamlessly.</p>
       </div>
       <div class="image">
@@ -228,7 +227,7 @@
 
       <div class="copy-container">
         <h3>
-          Solution & Further Considerations
+          Solution
         </h3>
         <p>
           Helping our daily users find and deliver simple metrics about their records was a matter of combining multiple
@@ -304,12 +303,12 @@
         </figure>
       </div>
       <div class="copy-container">
-        <p>Although the research was well-conducted and well-considered, the project was de-prioritized due to
+        <h3>Further Considerations</h3>
+        <p>Although the research was well conducted and considered, the project was de-prioritized due to
           complexity,
-          with engineering resources diverted to developing a third-party platform for data analysis and reporting. A
-          disappointing outcome, but not an unusual one for a resource-constrained organization. If the project were to
-          be
-          re-considered, I would have liked to explore a solution that integrated more "wizard"-like flows to guide
+          with engineering resources diverted to developing a third-party platform for data analysis and reporting. If
+          the project were
+          reopened, I would have liked to explore a solution that integrated more wizard-like flows to guide
           users
           through reporting, along with robust user acceptance testing. </p>
       </div>

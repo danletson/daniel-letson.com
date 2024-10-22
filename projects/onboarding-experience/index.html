@@ -57,7 +57,7 @@
     <section class="project" id="onboarding-experience">
       <div class="copy-container">
         <span class="story-type">Case Study</span>
-        <h1>Grantseeker Onboarding Experience</h1>
+        <h1>Onboarding Experience</h1>
         <h2>Turning free signups into engaged users with meaningful first steps and magical automation</h2>
       </div>
       <div class="image">
@@ -75,22 +75,22 @@
           </div>
           <div class="facet-value">
             Grantseeker</div>
-        </div>
-        <div class="overview-facet">
-          <div class="facet-label">
-            Success Metrics
-          </div>
-          <div class="facet-value">
-            Paid signups<br>
-            WAU retention
-          </div>
-        </div>
-        <div class="overview-facet">
           <div class="facet-label">
             Role
           </div>
           <div class="facet-value">
             Product Designer
+          </div>
+        </div>
+        <div class="overview-facet overview-facet--impact">
+          <div class="facet-label">
+            Impact
+          </div>
+          <div class="facet-value">
+            <ul>
+              <li>Achieved profitability in 6 months</li>
+              <li>40% Increase in onboarding completions</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -165,26 +165,9 @@
         <p>Unfortunately, usage analytics revealed that users rarely engaged with these walkthrough steps, and most new
           signups were not successfully creating "real" data on their first visit. We'd need to cut the effort required
           even further to acheive the stickiness we were hoping for.</p>
-
-        <h3>Solution & Further Considerations</h3>
         <p>
           After consultation with marketing and engineering, the value proposition flow was cut in favor of an optional
           video, and the checklist of "must-do" actions was cut from 5 steps to 3.</p>
-        <p>
-          Our biggest innovation in getting users onboarded quickly came from leveraging public data. Utilizing
-          government
-          public-records APIs, we were able to architect a flow that would get a user up and running with their first
-          "real" data in <strong>less than a minute</strong>, borrowing from quick-start social media patterns like
-          "find
-          your friends" or "who to follow".
-        </p>
-        <ol>
-          <li>A user provides the name of their organization at signup</li>
-          <li>A pre-populated search lets the user select their org from a list</li>
-          <li>An API call pulls in all the funders that have previously given to that org, according to government
-            records.</li>
-          <li>The user creates records for all of their funders in a single click</li>
-        </ol>
       </div>
       <div class="image">
         <figure style="margin-bottom: 24px;">
@@ -202,6 +185,24 @@
           </figcaption>
         </figure>
       </div>
+      <div class="copy-container">
+        <p>
+          Our biggest innovation in getting users onboarded quickly came from leveraging public data. Utilizing
+          government
+          public-records APIs, we were able to architect a flow that would get a user up and running with their first
+          "real" data in <strong>less than a minute</strong>, borrowing from quick-start social media patterns like
+          "find
+          your friends" or "who to follow".
+        </p>
+        <ol>
+          <li>A user provides the name of their organization at signup</li>
+          <li>A pre-populated search lets the user select their org from a list</li>
+          <li>An API call pulls in all the funders that have previously given to that org, according to government
+            records.</li>
+          <li>The user creates records for all of their funders in a single click</li>
+        </ol>
+      </div>
+
       <div class="image">
         <figure>
           <picture>
@@ -231,8 +232,17 @@
         <p>After initial onboarding, users are fed a drip campaign of super-lightweight "tips", to nudge them into
           socializing the app with their coworkers and further integrate Grantseeker's tools with their day-to-day work.
         </p>
+        <h3>Solution</h3>
+        <p>
+          The redesigned onboarding resulted in:
+        <ul>
+          <li>A massive 40% increase in onboarding completions</li>
+          <li>Profitability for the platform within 6 months of launching paid tiers</li>
+        </ul>
+        </p>
       </div>
       <div class="copy-container">
+        <h3>Further Considerations</h3>
         <p>The new onboarding flow is highly effective at getting new users set up quickly, but the built-in logic is
           rather simplistic. If I had more time and resources on the project, I would have loved to further investigate
           branching flows for different types of users, prospect scoring, and smarter targeting logic for nudges. </p>
@@ -243,26 +253,6 @@
     <div>Designed and built by Daniel Letson in Oakland, California. Contents copyright️ 2024.
     </div>
   </footer>
-  <script>
-    const slider1 = new Glide(".glide-1", {
-      type: "slider",
-      startAt: 0,
-      perView: 1,
-      gap: 0,
-      peek: {
-        before: 50,
-        after: 50
-      }
-    }).mount();
-
-    document.querySelector(".glide-1 .glide__arrow--right").addEventListener("click", () => {
-      slider1.go(">");
-    });
-
-    document.querySelector(".glide-1 .glide__arrow--left").addEventListener("click", () => {
-      slider1.go("<");
-    });
-  </script>
 </body>
 
 </html>

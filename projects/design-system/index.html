@@ -56,7 +56,7 @@
     <section class="project" id="design-system">
       <div class="copy-container">
         <span class="story-type">Case Study</span>
-        <h1>Fluxx Labs Design System</h1>
+        <h1>SaaS Design System</h1>
         <h2>Fortifying and standardizing UX patterns across a complex productivity platform</h2>
       </div>
       <div class="image">
@@ -74,22 +74,23 @@
           </div>
           <div class="facet-value">
             Fluxx Grantmaker</div>
-        </div>
-        <div class="overview-facet">
-          <div class="facet-label">
-            Success Metrics
-          </div>
-          <div class="facet-value">
-            WCAG AA 2.2 compliance<br>
-            Development velocity
-          </div>
-        </div>
-        <div class="overview-facet">
           <div class="facet-label">
             Role
           </div>
           <div class="facet-value">
             Senior Product Designer
+          </div>
+        </div>
+        <div class="overview-facet overview-facet--impact">
+          <div class="facet-label">
+            Impact
+          </div>
+          <div class="facet-value">
+            <ul>
+              <li>Achieved WCAG AA 2.2 compliance</li>
+              <li>20% Increase in development velocity</li>
+              <li>30+% Increase in code coverage</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -106,20 +107,6 @@
           <li>Lack of consistent information hierarchy makes content hard to scan</li>
           <li>Front-end styles are fragmented and difficult to maintain</li>
         </ul>
-        <h3>Goals</h3>
-        <ul>
-          <li>Modernization of UI look & feel</li>
-          <li>Accessibility improvements (visual & semantic)</li>
-          <li>Standardization of common UI elements</li>
-          <li>Streamlined development pipeline for new features</li>
-        </ul>
-        <p></p>
-        <h3>Background</h3>
-
-        <p>Fluxx began as bespoke database software for a single nonprofit, growing over nearly a decade into an
-          extremely robust and flexible SaaS platform, handling everything from form-building, to customer management,
-          to custom Ruby scripting. During that process, tight timelines and a lack of design leadership had lead to a
-          fragmented UI that was frustrating for users and diffucult for engineers to maintain.</p>
       </div>
       <div class="image">
         <figure>
@@ -132,9 +119,18 @@
         </figure>
       </div>
       <div class="copy-container">
+        <h3>Goals</h3>
+        <ul>
+          <li>Modernization of UI look & feel</li>
+          <li>Accessibility improvements (visual & semantic)</li>
+          <li>Standardization of common UI elements</li>
+          <li>Streamlined development pipeline for new features</li>
+        </ul>
+      </div>
+      <div class="copy-container">
         <h3>Process</h3>
         <p>In preparation for the development of a design system, my design partner and I started with a 2-week design
-          sprint. We audited the existing app for usability issues, explored product parallels, and mocked up "ideal"
+          sprint. I audited the existing app for usability issues, explored product parallels, and mocked up "ideal"
           states for the most common UX patterns.</p>
       </div>
       <div class="image">
@@ -171,31 +167,31 @@
         </figure>
       </div>
       <div class="copy-container">
-        <p>The results of the design sprint were socialized with product and technical leadership, and lead to the
-          creation of the platform's first full-on design system.</p>
-
-        <p>From this holistic view, we set about isolating and standardizing the building blocks of a universally
-          applicable design system. Spacing, colors, and typography guidelines were built in Figma, and used as the
-          foundation for the development of subsequent components and patterns. Eventually, these values were published
-          as platform-agnostic design tokens, to streamline the building process for our developers.</p>
+        <p>The results of the design sprint were socialized with product and technical leadership, building momentum for
+          to the creation of the platform's first full-fledged design system. Following Atomic Design principles, I
+          developed:</p>
+        <ul>
+          <li>Spacing, colors, and typography specifications (maintained in Figma)</li>
+          <li>Framework-agnostic design tokens (as JSON managed via Git)</li>
+          <li>React components (developed and QA'd via Storybook)</li>
+        </ul>
       </div>
       <div class="image">
         <figure>
           <picture>
-            <iframe title="Embeded Figma design file - Fluxx design system tokens library"
-              style="border: 1px solid rgba(0, 0, 0, 0.1); margin-bottom: 12px;" width="100%" height="550"
-              src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FpiBJKA11MuyFoPx5eaeWw2%2FFluxx-Design-System---Design-Tokens%3Ftype%3Ddesign%26node-id%3D1473%253A8%26mode%3Ddesign%26t%3DdsPsOEx1RR2Xc39B-1"
-              allowfullscreen=""></iframe>
+            <picture>
+              <img src="../../img/design-system-tokens.png" alt="Design system tokens">
+            </picture>
           </picture>
           <figcaption>
-            Fluxx Design System Tokens Library
+            Example design system tokens
           </figcaption>
         </figure>
       </div>
       <div class="copy-container">
-        <p>While building a new front end from scratch would have been ideal, there weren't enough engineering resources
-          to support such a giant project. Instead, the design team collaborated with product managers to isolate
-          upcoming new features to start building design-system aligned components opportunistically. This way, every
+        <p>Instead of pushing forward the design system as a monolithic project, the design team collaborated with
+          product managers to isolate
+          upcoming new features to start building re-aligned components opportunistically. This way, every
           sprint included work to flesh out the React library of design system components and patterns.</p>
       </div>
       <div class="image">
@@ -242,16 +238,17 @@
         </figure>
       </div>
       <div class="copy-container">
-        <h3>Solution & Further Considerations</h3>
+        <h3>Solution</h3>
         <p>After designing and compiling hundreds of individual patterns and variants, the Fluxx design system is now in
-          regular use, powering dozens of shipped features. The library comprises <a
-            href="https://www.figma.com/file/S2hU0lc4xaZ86RXlx5SOyL/Fluxx-Design-System---Tokens?type=design&node-id=314%3A6166&mode=design&t=pN6YOFSdeHrut3D1-1">portable
-            design tokens</a>, <a
-            href="https://www.figma.com/file/cgXV2WmZILbfuEejyaJeNU/Fluxx-Design-System---Components-(Community)?type=design&node-id=569%3A1880&mode=design&t=51ncckBOSb1CvNMM-1"></a>UI
-          components, a CI/CD pipeline for automated and manual QA, and an internal documentation site. New feature
-          development has massively accelerated, and even retrofitting legacy components takes less time thanks to the
-          tokenization of core styles.</p>
+          regular use, powering dozens of shipped features. In six months, the system:
+        </p>
+        <ul>
+          <li>Achieved WCAG 2.2 AA compliance for the platform</li>
+          <li>Improved code coverage for new features by more than 30%</li>
+          <li>Reduced average story points for new features by 20%</li>
+        </ul>
 
+        <h3>Further Considerations</h3>
         <p>While components built with the new design system have been well-received by users, I would have liked more
           time in the process to put more holistic examples of design system patterns through user acceptance testing.
           The incremental approach that Fluxx favored was a business necessity, but being able to build a brand-new

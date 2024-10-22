@@ -112,7 +112,7 @@ p.subhead{
   width: 24px;
 } */
 
-p{
+p, li{
     @apply mb-4 mt-0;
     /* letter-spacing: -0.01em; */
     & a{
@@ -125,6 +125,8 @@ p{
         border-bottom: 1px solid lightgreen;
     }
 }
+
+
 
 *::selection{
   background: lightgreen;
@@ -495,7 +497,7 @@ section.poster>img{
   overflow-y: hidden;
   position:relative;
   height: 0;
-  padding-bottom: 60%;
+  padding-bottom: 82%;
 }
 
 .project-entry#demographics-reporting .image, .project-entry#data-explorer .image{
@@ -527,10 +529,11 @@ section.poster>img{
 }
 
 .project .project-overview-container{
-  @apply px-4 py-4 rounded-md md:flex mb-24;
+  @apply px-6 py-6 rounded-md md:flex mb-24;
   gap: 16px;
   justify-content: space-between;
-  background: rgba(0,0,0, 0.3);
+  font-size: 1.25rem;
+  background: rgba(0,0,0, 0.5);
 }
 
 .project .project-overview-container .overview-facet{
@@ -543,14 +546,24 @@ section.poster>img{
 }
 
 .project .project-overview-container .overview-facet .facet-label{
-  @apply opacity-70 text-sm mb-1;
+  @apply opacity-70 mb-2 text-sm;
   color: lightgreen;
 }
 
 .project .project-overview-container .overview-facet .facet-value{
-  @apply font-mono text-sm;
+  @apply font-mono mb-6;
 }
 
+.project .project-overview-container .overview-facet .facet-value ul{
+  @apply mb-0 pl-0;
+  list-style: none;
+}
+
+.project .project-overview-container .overview-facet.overview-facet--impact ul li{
+  @apply text-primary-dark inline-block px-2;
+  background: lightgreen;
+
+}
 
 
 /* .resume .subhead{
