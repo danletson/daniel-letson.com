@@ -947,6 +947,10 @@ body {
   font-variation-settings: 'wght' 500;
 }
 
+.home-intro .tagline h2 a:hover{
+  border-bottom: 1px solid lightgreen;
+}
+
 .home-intro a.cta {
   display: inline-block;
   padding-left: 0.75rem;
@@ -1215,6 +1219,16 @@ section.project {
 section.project .image {
   margin-top: 5rem;
   margin-bottom: 5rem;
+}
+
+@media (min-width: 768px) {
+  section.project .image.twoup {
+    display: flex;
+  }
+}
+
+section.project .image.twoup{
+  gap: 16px;
 }
 
 section.project .copy-container {

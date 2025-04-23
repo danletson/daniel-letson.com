@@ -245,6 +245,10 @@ body{
   font-variation-settings: 'wght' 500;
 }
 
+.home-intro .tagline h2 a:hover{
+  border-bottom: 1px solid lightgreen;
+}
+
 .home-intro a.cta{
   @apply inline-block px-3 py-2;
   background: rgba(0,0,0,0.6);
@@ -457,6 +461,11 @@ section.project{
 
 section.project .image{
   @apply my-20;
+}
+
+section.project .image.twoup{
+  @apply md:flex;
+  gap: 16px;
 }
 
 section.project .copy-container{
